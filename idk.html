@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/Css/homepage.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                font-family: 'Montserrat';
+            }
+
+            /* width */
+            ::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #ffffff; 
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: rgb(170, 170, 170); 
+                border-radius: 5px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+            }
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                transition: margin-left 0.3s;
+            }
+
+            .home_options {
+                position: relative;
+                width: calc(100% - 65px);
+                height: 100%;
+                margin-left: 65px;
+                display: flex;
+                flex-direction: row;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                transition: width 0.3s, margin-left 0.3s;
+            }
+
+            .home_option {
+                position: relative;
+                width: calc(100% / 3);
+                height: calc(100% + 120px);
+                margin-top: -60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                flex-direction: column;
+                margin-left: 0px;
+                transition: width 0.3s, height 0.3s ease-in 0.3s, border-radius 0.3s ease-in 0.3s;
+                overflow: hidden;
+                z-index: 10;
+            }
+
+            /* .home_option:hover {
+                width: calc(100% / 3);
+            } */
+
+            .home_option_txt_cont {
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 50px;
+                transition: transform 0.3s;
+            }
+
+            .home_option_img {
+                position: absolute;
+                width: 100%;
+                height: 107.5%;
+                inset: 0px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: -2;
+                filter: brightness(70%);
+                transition: background-position 0.3s, transform 0.3s;
+            }
+
+            .home_option_coat {
+                position: absolute;
+                inset: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
+            .home_option_txt_cont > h3 {
+                font-size: 22px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .home_option_txt_cont > h6 {
+                font-size: 11px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .home_option_btn {
+                margin-top: 100px;
+                padding: 10px 20px;
+                background-color: white;
+                color: black;
+                border-radius: 20px;
+                font-size: 12px;
+                cursor: pointer;
+                transition: transform 0.3s;
+            }
+
+            #home_option_img1 {
+                background-image: url(https://www.mediafire.com/convkey/8005/304weql6507j6q99g.jpg);
+            }
+
+            #home_option_img2 {
+                background-image: url(https://www.mediafire.com/convkey/f5eb/jvezfbuylwyssx09g.jpg); 
+            }
+
+            #home_option_img3 {
+                background-image: url(https://www.mediafire.com/convkey/bdce/knf0g7hb1f4w6ox9g.jpg);
+                background-position: 65%; 
+            }
+
+            #home_option_img4 {
+                background-image: url(img4.jpg);
+            }
+
+            #home_option_coat1 { background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.6), rgba(86, 67, 250, 0.6)); }
+            #home_option_coat2 { background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.6), rgba(255, 119, 48, 0.6)); }
+            #home_option_coat3 { background-image: linear-gradient(to right bottom, rgba(85,197,122,0.6), rgba(40,180,133,0.6)); }
+            #home_option_coat4 { 
+                background: radial-gradient(circle at 10% 20%, rgb(101, 255, 253) 0%, rgb(36, 153, 238) 90%);
+                opacity: 0.6;
+            }
+        </style>
+    </head>
+    <body class="homepage_body">
+        <div class="home_options">
+            <div class="home_option" id="home_option1">
+                <div class="home_option_img" id="home_option_img1"></div>
+                <div class="home_option_coat" id="home_option_coat1"></div>
+                <div class="home_option_txt_cont">
+                    <h6>First Mode Is</h6>
+                    <h3>Pendant Mode</h3>
+                    <h6>With Three Varitations</h6>
+                </div>
+                <div class="home_option_btn" id="home_option_btn1">See More</div>
+            </div>
+            <link rel="stylesheet" href="/static/Css/about_us.css">
+            <style>
+                .below1_section {
+                    position: absolute;
+                    width: 24.15%;
+                    height: fit-content;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+                    margin-top: 11%;
+                    z-index: 1;
+                    padding-top: 150px;
+                    background-color: rgb(230, 230, 230);
+                    overflow: hidden;
+                    margin-left: calc(24.15% * 0);
+                }
+
+                .below1_part1 {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 90px;
+                    margin-bottom: 70px;
+                    margin-top: 50px;
+                    /* padding: 30px 30px 90px 30px; */
+                }
+
+                .below1_part1 > h2 {
+                    font-size: 30px;
+                    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.795), rgba(86, 67, 250, 0.795));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+
+                .below1_part1_text {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-top: 50px;
+                }
+
+                .below1_part1_text > p {
+                    width: 42%;
+                    letter-spacing: 0.5px;
+                    word-spacing: 3px;
+                    line-height: 30px;
+                    height: fit-content;
+                    font-size: 17px;
+                }
+
+                .below1_part1_pic {
+                    width: 375px;
+                    height: 250px;
+                    background-image: url(https://www.mediafire.com/convkey/c3d7/mpj4mbr1bsiy5559g.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    filter: brightness(90%);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.418);
+                }
+
+                .below1_part2 {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 600px;
+                    transform: skewY(5deg);
+                    overflow: hidden;
+                }
+
+                .below1_part2_img {
+                    position: absolute;
+                    width: 100%;
+                    height: 120%;
+                    z-index: 1;
+                    background-image: url(https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://artofmentoring.net/wp-content/uploads/2020/05/Reflection-1568x1046.jpeg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .below1_part2 > *:not(.below1_part2_coat) {
+                    transform: skewY(-5deg);
+                }
+
+                .below1_part2_coat {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.525), rgba(86, 67, 250, 0.525));
+                    z-index: 2;
+                }
+
+                .below1_part2_goals {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    z-index: 5;
+                }
+
+                .below1_part2_goal {
+                    width: 15.5%;
+                    height: 48%;
+                    background-color: rgba(255, 255, 255, 0.85);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                    display: flex;
+                    flex-direction: column;
+                    /* justify-content: center; */
+                    align-items: center;
+                    padding: 30px;
+                    z-index: 5;
+                }
+
+                .below1_part2_goal > h5 {
+                    font-weight: 400;
+                    font-size: 13.7px;
+                    width: 100%;
+                    height: 60%;
+                    line-height: 22px;
+                    word-spacing: 1.5px;
+                    text-align: center;
+                    overflow-y: scroll;
+                }
+
+                .below1_part2_goal svg {
+                    fill: url(#MyGradient);
+                    width: 40%;
+                    height: 40%;
+                }
+
+                .below1_part2_goal .ppl_svg {
+                    width: 45%;
+                    height: 45%;
+                    margin-top: -5%;
+                    margin-bottom: -5%;
+                    fill: url(#MyGradient);
+                    stroke-width: 0;
+                    stroke-linecap: round;
+                    stroke: url(#MyGradient);
+                }
+
+                .below1_part2_goal .ppl_svg > .ppl_svg_circle {
+                    stroke-width: 2;
+                    fill: transparent;
+                    /* z-index: 100; */
+                }
+
+                .below1_part2_goal .ppl_svg > path:nth-child(2), .below1_part2_goal .ppl_svg > path:nth-child(3), .below1_part2_goal .ppl_svg > path:nth-child(6) {
+                    fill: transparent;
+                    stroke-width: 2;
+                    stroke: url(#MyGradient);
+                    z-index: 1;
+                }
+
+                .below1_part3 {
+                    position: relative;
+                    width: 100%;
+                    padding: 120px 0;
+                    height: 550px;
+                    display: flex;
+                    justify-content: center;
+                    transform: skewY(5deg);
+                    z-index: 3;
+                    background-color: rgb(230, 230, 230);
+                }
+
+                .below1_part3 > * {
+                    transform: skewY(-5deg);
+                }
+
+                .below1_part3_slides {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 400px;
+                    height: 317.5px;
+                    z-index: 10;
+                    overflow-x: hidden;
+                    margin-left: -37.5vw;
+                    margin-top: -50px;
+                }
+
+                .below1_part3_slides_inner_cont {
+                    position: absolute;
+                    top: 50px;
+                    left: 0px;
+                    width: 300%;
+                    display: flex;
+                    flex-direction: row;
+                    transition: left 0.3s;
+                }
+
+                .below1_part3_slide > * {
+                    margin: 0;
+                }
+
+                .below1_part3_slide {
+                    width: 400px;
+                    background-color: rgb(230, 230, 230);
+                }
+
+                .below1_part3_slide h3 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                    margin-top: 10px;
+                }
+
+                .below1_part3_slide p {
+                    line-height: 27px;
+                    text-align: justify;
+                }
+
+                .below1_part3_dashes {
+                    position: absolute;
+                    inset: 0px;
+                    top: 30px;
+                    width: 170px;
+                    height: fit-content;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    z-index: 10;
+                }
+
+                .below1_part3_dash {
+                    width: 25%;
+                    height: 5px;
+                    background-color: rgb(211, 211, 211);
+                }
+
+                .below1_part3_imgs {
+                    position: absolute;
+                    inset: 0px;
+                    top: 5vh;
+                    left: 6.5vw;
+                }
+
+                .below1_part3_img {
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 225px;
+                    height: calc(225px * (2 / 3));
+                    z-index: 5;
+                    position: absolute;
+                    inset: 0px;
+                    box-shadow: 0 0;
+                }
+
+                #below1_part3_img1 {
+                    top: 20px;
+                    left: 200px;
+                    background-image: url(https://www.mediafire.com/convkey/44b1/zli9djxcxe3c90r9g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                #below1_part3_img2 {
+                    top: 120px;
+                    left: 90px;
+                    background-image: url(https://www.mediafire.com/convkey/2b4b/p8it9tjilbz4oju9g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                #below1_part3_img3 {
+                    background-image: url(https://www.mediafire.com/convkey/f5eb/jvezfbuylwyssx09g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                .below1_part4 {
+                    margin-top: -60px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: fit-content;
+                    padding: 230px 0 150px 0;
+                    z-index: 1;
+                    background-image: url(https://www.diversityresources.com/wp-content/uploads/2019/02/Managing-Cultural-Diversity-in-the-Workplace.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .below1_part4 .below1_part4_coat {
+                    position: absolute;
+                    width: 100%;
+                    height: 105%;
+                    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.6), rgba(86, 67, 250, 0.6));
+                    margin-top: -5%;
+                    z-index: -1;
+                }
+
+                .below1_part4 .froms_cont {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 65%;
+                    height: 370px;
+                    padding: 30px;
+                    background-color: rgba(20, 20, 20, 0.85);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                    color: rgb(201, 201, 201);
+                }
+
+                .below1_part4 .status_message {
+                    width: 42.5%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-left: 5px;
+                }
+
+                .below1_part4 .status_message_title {
+                    font-weight: 400;
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+
+                .below1_part4 .status_message_message {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                    line-height: 22px;
+                    word-spacing: 2px;
+                    letter-spacing: 0.75px;
+                    font-weight: 300;
+                }
+
+                .below1_part4 .status_message > button {
+                    width: fit-content;
+                    outline: none;
+                    border: 2px solid rgb(201, 201, 201);
+                    background-color: transparent;
+                    color: rgb(201, 201, 201);
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    padding: 7.5px 25px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    cursor: pointer;
+                }
+
+                .below1_forms_slider {
+                    position: absolute;
+                    margin-left: -28%;
+                    width: calc(65% / 2);
+                    height: calc(370px + 80px);
+                    background-color: rgb(230, 230, 230);
+                    overflow: hidden;
+                    transition: margin-left 0.3s;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                }
+
+                .below1_form_slider_inner_cont {
+                    width: 200%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    transition: left 0.3s;
+                }
+
+                .below1_part4 .login_form, .below1_part4 .register_form {
+                    width: 50%;
+                    height: 100%;
+                    padding: 30px;
+                }
+
+                .below1_part4 .register_form > .registration_details {
+                    width: 100%;
+                    height: fit-content;
+                }
+
+                .below1_part4 .login_form > *:not(input, h2), .below1_part4 .register_form *:not(input, .registration_details, h2) {
+                    display: none;
+                }
+
+                .below1_part4 .login_form, .below1_part4 .register_form, .below1_part4 .register_form > .registration_details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .below1_part4 .login_form input:not(.Submit), .below1_part4 .register_form input:not(.Submit) {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 15.5px;
+                    border: none;
+                    outline: none;
+                    margin-top: 20px;
+
+                    border-bottom: 10px solid;
+                    border-image-slice: 1;
+                    border-width: 5px;
+                    border-image-source: linear-gradient(to right bottom, rgba(41, 152, 255, 1), rgba(86, 67, 250, 1));
+                    /* background-image: linear-gradient(to bottom, rgba(0, 153, 255, 0.795), rgba(31, 47, 152, 0.795));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text; */
+                }
+
+                .below1_part4 input[type=file] {
+                    display: none;
+                }
+
+                .below1_part4 .login_form .Submit, .below1_part4 .register_form .Submit {
+                    margin-top: 20px;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 7.5px 25px;
+                    text-transform: uppercase;
+                    outline: none;
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 1), rgba(86, 67, 250, 1));
+                    cursor: pointer;
+                }
+
+                .below1_part4 .login_form > h2, .below1_part4 .register_form > h2 {
+                    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 1), rgba(86, 67, 250, 1));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    font-weight: 600;
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+
+                .below1_part5 {
+                    width: 100%;
+                    height: 275px;
+                    color: white;
+                    background-color: rgb(25, 25, 25);
+                    z-index: 5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .below1_part5_name_and_logo {
+                    transform: scale(1.5);
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 220px;
+                    margin-top: 20px;
+                }
+
+                .below1_part5_logo {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 50px;
+                }
+
+                /* .below1_part5_name {
+                    background-image: linear-gradient(to bottom, rgb(56, 175, 255), rgb(53, 67, 156));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                } */
+
+                .below1_part5_oscilation {
+                    width: 5px;
+                    height: 20px;
+                    background-color: white;
+                    border-radius: 5px;
+                }
+
+                #below1_part5_oscilation1, #below1_part5_oscilation5 {
+                    height: 10px;
+                }
+
+                #below1_part5_oscilation3 {
+                    height: 30px;
+                }
+
+                .below1_part5_footer_other_stuff {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    color: rgb(243, 243, 243);
+                    margin-top: 50px;
+                }
+
+                .below1_part5_credits {
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: 0 -1px 0 grey;
+                    padding: 20px 10px;
+                    line-height: 25px;
+                }
+            </style>
+            <div class="below1_section">
+                <div class="below1_part1">
+                    <h2>The Journey / Design Process</h2>
+                    <div class="below1_part1_text">
+                        <p> Reaching this final product wasn't easy requiring a lot of thinking and effort. 
+                            I found myself cycling many times through the engineering design proecess especially 
+                            the prototyping, testing and improving processes as I faced many obstacles. Some of 
+                            those challenges included: the design exceeding size constraints, assembly being too 
+                            difficult, certain parts not functioning as planned, absence of fllexible filament etc. 
+                            To resolve these issues, I tackled each problem individually and asked parents and 
+                            siblings for feedback until I finally reached this final design.
+                        </p>
+                        <div class="below1_part1_pic"></div>
+                    </div>
+                </div>
+                <div class="below1_part2">
+                    <div class="below1_part2_img"></div>
+                    <div class="below1_part2_coat"></div>
+                    <div class="below1_part2_goals">
+                        <div class="below1_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <defs>
+                                    <linearGradient id="MyGradient">
+                                        <stop offset="5%" stop-color="rgba(41, 152, 255, 1)" />
+                                        <stop offset="95%" stop-color="rgba(86, 67, 250, 1)" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M13 3.7446C13 3.27314 12.8728 2.50021 12.1657 2.14424C11.4151 1.76635 10.7163 2.19354 10.3623 2.51158L4.94661 7.43717H3C1.89543 7.43717 1 8.3326 1 9.43717L1.00001 14.6248C1.00001 15.7293 1.89544 16.6248 3.00001 16.6248H4.95001L10.3623 21.4891C10.7175 21.8081 11.416 22.2331 12.1656 21.8554C12.8717 21.4998 13 20.7286 13 20.2561V3.7446Z"/>
+                                <path d="M17.336 3.79605L17.0952 3.72886C16.5633 3.58042 16.0117 3.89132 15.8632 4.42329L15.7289 4.90489C15.5804 5.43685 15.8913 5.98843 16.4233 6.13687L16.6641 6.20406C18.9551 6.84336 20.7501 9.14615 20.7501 12.0001C20.7501 14.854 18.9551 17.1568 16.6641 17.7961L16.4233 17.8632C15.8913 18.0117 15.5804 18.5633 15.7289 19.0952L15.8632 19.5768C16.0117 20.1088 16.5633 20.4197 17.0952 20.2713L17.336 20.2041C20.7957 19.2387 23.2501 15.8818 23.2501 12.0001C23.2501 8.11832 20.7957 4.76146 17.336 3.79605Z"/>
+                                <path d="M16.3581 7.80239L16.1185 7.73078C15.5894 7.57258 15.0322 7.87329 14.874 8.40243L14.7308 8.88148C14.5726 9.41062 14.8733 9.96782 15.4024 10.126L15.642 10.1976C16.1752 10.3571 16.75 11.012 16.75 12C16.75 12.9881 16.1752 13.643 15.642 13.8024L15.4024 13.874C14.8733 14.0322 14.5726 14.5894 14.7308 15.1185L14.874 15.5976C15.0322 16.1267 15.5894 16.4274 16.1185 16.2692L16.3581 16.1976C18.1251 15.6693 19.25 13.8987 19.25 12C19.25 10.1014 18.1251 8.33068 16.3581 7.80239Z"/>
+                            </svg>
+                            <h5>The most enjoyable moment of this entire project was assmbling the 3D printed parts and seeing my creation come to life. Seeing all the pieces come perfectly together feels very rewarding after all the effort that was put into it (Question 2.4).</h5>
+                        </div>
+                        <div class="below1_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                <g>
+                                    <path d="M7,25c-1.7,0-3-1.3-3-3V10c0-1.7,1.3-3,3-3s3,1.3,3,3v12C10,23.7,8.7,25,7,25z"/>
+                                </g>
+                                <g>
+                                    <path d="M25,25c-1.7,0-3-1.3-3-3V10c0-1.7,1.3-3,3-3s3,1.3,3,3v12C28,23.7,26.7,25,25,25z"/>
+                                </g>
+                                <g>
+                                    <path d="M23,17H9c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S23.6,17,23,17z"/>
+                                </g>
+                                <g>
+                                    <path d="M2,10.2c-1.2,0.4-2,1.5-2,2.8v6c0,1.3,0.8,2.4,2,2.8V10.2z"/>
+                                    <path d="M30,10.2v11.6c1.2-0.4,2-1.5,2-2.8v-6C32,11.7,31.2,10.6,30,10.2z"/>
+                                </g>
+                            </svg>
+                            <h5>I realized about myself that I'm not as bad as I thought I was when it came to the aesthetic aspect of the design. My parents ans iblings complimented the design's aesthetic saying it looked very good. I was also very satisfied with how it loooked especially the use of gold and black (Question 3.2).</h5>
+                        </div>
+                        <div class="below1_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path d="M502.198,263.697C492.386,148.068,375.395,65.876,259.027,65.876c-153.162,0-143.009,50.139-160.082,51.56   C57.128,120.813,0,169.687,0,226.746c0,57.148,23.702,112.864,92.638,112.864c-4.196,23.673,4.165,62.024,78.62,62.024   c35.664,0,85.852,0,103.149,0c0,56.369,85.034,43.14,114.898,43.14c29.941,0,34.818-32.062,29.358-40.385   C511.99,403.679,525.092,306.224,502.198,263.697z M367.112,114.661h26.447c5.684,0,10.308,4.634,10.308,10.366   c0,5.86-4.624,10.523-10.308,10.523h-26.447c-5.86,0-10.502-4.663-10.502-10.523C356.61,119.295,361.252,114.661,367.112,114.661z    M290.477,150.881c1.859,0,3.562,0,5.149,0c5.509,0,6.94-0.915,6.94-0.915c0.516-1.003,0.516-4.867,0.516-7.31v-30.505   c0-5.704,4.555-10.416,10.366-10.416c5.694,0,10.386,4.712,10.386,10.416v30.34c0.107,2.608,0.107,5.509-0.302,8.39h34.478   c1.06,0,2.21-0.049,3.591-0.049c8.372-0.35,21.045-0.72,30.37,8.225c6.054,5.85,9.228,14.61,9.228,25.94v36.697   c0,3.446-0.126,10.629,1.781,12.605c0.886,0.827,2.998,0.886,3.758,0.886h53.741c5.646,0,10.278,4.75,10.278,10.464   c0,5.85-4.633,10.503-10.278,10.503h-53.741c-9.559,0-15.418-3.854-18.572-7.106c-8.089-8.225-8.06-20.334-7.836-27.527v-1.557   v-34.965c0-5.275-1.052-9.208-2.863-10.979c-2.852-2.755-9.655-2.521-15.164-2.278c-1.568,0-2.969,0.116-4.293,0.116h-68.4   c0,0-0.108-0.116-0.331-0.116c-8.673,0-21.044,0-24.355,3.26c-0.204,0.243-0.983,0.857-0.983,3.494v56.962   c0,5.812-4.74,10.513-10.415,10.513c-5.763,0-10.445-4.701-10.445-10.513v-56.962c0-9.276,3.972-15.088,7.144-18.299   C259.942,150.657,276.276,150.706,290.477,150.881z M199.174,92.303c0-5.752,4.682-10.473,10.347-10.473   c5.841,0,10.502,4.72,10.502,10.473v11.505h17.512c5.665,0,10.347,4.76,10.347,10.435c0,5.811-4.682,10.503-10.347,10.503h-17.512   v14.942c0,5.693-4.662,10.473-10.502,10.473c-5.665,0-10.347-4.78-10.347-10.473V92.303z M96.482,144.584h43.336   c9.976-0.088,22.484-0.176,31.741,9.11c7.136,7.018,10.581,17.658,10.581,32.686v11.058h16.363c5.772,0,10.376,4.779,10.376,10.551   c0,5.752-4.604,10.454-10.376,10.454H182.14v8.664c0,5.762-4.73,10.493-10.396,10.493c-5.879,0-10.532-4.73-10.532-10.493V186.38   c0-8.858-1.548-15.029-4.36-17.774c-3.164-3.338-9.9-3.338-16.986-3.086H96.482c-5.918,0-10.454-4.72-10.454-10.522   C86.028,149.323,90.564,144.584,96.482,144.584z M87.77,236.909v19.059c0,5.811-4.604,10.464-10.542,10.464   c-5.714,0-10.318-4.653-10.318-10.464v-19.059H40.366c-5.781,0-10.502-4.722-10.502-10.474c0-5.772,4.722-10.503,10.502-10.503   h73.228c5.627,0,10.425,4.73,10.425,10.503c0,5.752-4.798,10.474-10.425,10.474H87.77z M141.16,305.679   c-5.996,5.869-8.848,14.455-8.848,26.291c0,5.664-4.75,10.464-10.454,10.464c-5.84,0-10.425-4.799-10.425-10.464   c0-17.424,5.071-31.275,15.039-41.107c17.774-17.54,45.748-17.092,62.384-16.839c1.81,0,3.309,0,4.78,0h84.315   c13.199,0,22.806-2.89,28.238-8.672c8.897-9.384,8.176-25.96,7.533-39.432c-0.135-3.232-0.272-6.268-0.272-8.916   c0-5.821,4.604-10.454,10.298-10.454c5.899,0,10.562,4.633,10.562,10.454c0,2.326,0.136,5.1,0.272,8.05   c0.77,15.448,1.81,38.828-13.101,54.616c-9.705,10.162-24.296,15.262-43.53,15.262h-84.315c-1.548,0-3.28,0-5.11,0   C174.275,294.737,152.646,294.406,141.16,305.679z M249.303,350.687v20.869c0,5.851-4.662,10.445-10.434,10.445   c-5.753,0-10.396-4.594-10.396-10.445v-20.869h-40.464c-5.694,0-10.483-4.673-10.483-10.464c0-5.674,4.788-10.445,10.483-10.445   h132.322c5.831,0,10.415,4.77,10.415,10.445c0,5.791-4.584,10.464-10.415,10.464H249.303z M390.025,402.247h-61.984   c-5.763,0-10.445-4.643-10.445-10.385c0-5.812,4.682-10.474,10.445-10.474h36.21V361.94c0-5.918,4.662-10.474,10.444-10.474   c5.821,0,10.415,4.556,10.415,10.474v19.448h4.916c5.723,0,10.425,4.662,10.425,10.474   C400.45,397.604,395.748,402.247,390.025,402.247z M417.105,329.779v-17.064h-48.348c-5.744,0-10.454-4.584-10.454-10.366   c0-5.772,4.71-10.503,10.454-10.503h73.052c5.889,0,10.551,4.731,10.551,10.503c0,5.782-4.662,10.366-10.551,10.366h-3.757v17.064   c0,5.89-4.692,10.445-10.445,10.445C421.845,340.224,417.105,335.669,417.105,329.779z M470.758,377.806h-26.427   c-5.831,0-10.494-4.555-10.494-10.366s4.663-10.406,10.494-10.406h26.427c5.86,0,10.571,4.595,10.571,10.406   S476.618,377.806,470.758,377.806z"/>
+                                </g>
+                            </svg>
+                            <h5>This design has an ancient Egyptian theme. It has hidden symbolism and a secret message in hieroglyphs that reads, "Live life to the fullest." The Ankh symbolizes life, death and reincarnation which is very fitting for a piece of jewelry that has multiple forms (Question 4.1).</h5>
+                        </div>
+                        <div class="below1_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path d="M92.574,294.24V124.336H43.277C19.449,124.336,0,144.213,0,168.467v206.44   c0,24.254,19.449,44.133,43.277,44.133h62v45.469c0,3.041,1.824,5.777,4.559,6.932c2.736,1.154,5.957,0.486,8.023-1.641   l49.844-50.76h106.494c23.828,0,43.279-19.879,43.279-44.133v-0.061H172.262C128.314,374.846,92.574,338.676,92.574,294.24z"/>
+                                    <path d="M462.717,40H172.26c-27.105,0-49.283,22.59-49.283,50.197v204.037c0,27.61,22.178,50.199,49.283,50.199   h164.668l75.348,76.033c2.399,2.442,6.004,3.172,9.135,1.852c3.133-1.322,5.176-4.434,5.176-7.887v-69.998h36.131   c27.106,0,49.283-22.59,49.283-50.199V90.197C512,62.59,489.822,40,462.717,40z M369.156,280.115H195.92v-24.316h173.236V280.115z    M439.058,204.129H195.92v-24.314h243.138V204.129z M439.058,128.143H195.92v-24.315h243.138V128.143z"/>
+                                </g>
+                            </svg>
+                            <h5>One thing I would change about this design if I were given more time is to make it even more versatile that it already is. The pendant is versatile enough, however, the string or chain is very static. Making the chain / string composed of multiple small sections could give this jewelry a new form like a watch or a ring on top of everything else it already has (Question 5.3).</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="below1_part3">
+                    <div class="below1_part3_text">
+                        <div class="below1_part3_slides">
+                            <div class="below1_part3_dashes">
+                                <div class="below1_part3_dash" id="below1_part3_dash1"></div>
+                                <div class="below1_part3_dash" id="below1_part3_dash2"></div>
+                                <div class="below1_part3_dash" id="below1_part3_dash3"></div>
+                            </div>
+                            <div class="below1_part3_slides_inner_cont">
+                                <div class="below1_part3_slide" id="below1_part3_slide1">
+                                    <h3>Pendant Variation 1</h3>
+                                    <p>This varitation of the pendant mode is the result of all the parts 
+                                        assembled together. This is the original form of this design and it 
+                                        takes the shape of an Ankh. The hieroglyph engravings on it read, "Live
+                                        life to the fullest". To connect it to the chain or string, one can 
+                                        simply screw it to the hole on top by rotating the Ankh until it is tight.
+                                    </p>
+                                </div>
+                                <div class="below1_part3_slide" id="below1_part3_slide2">
+                                    <h3>Pendant Variation 2</h3>
+                                    <p>The second variation of the pendant mode is the top curved part of the
+                                        Ankh being disassembled and used a long as a pendant. It is smaller and 
+                                        more compact for those who want a more minimilistic look. To connect it 
+                                        to the chain or string, you can simply screw it to the hole on either side
+                                        of the curved part.
+                                    </p>
+                                </div>
+                                <div class="below1_part3_slide" id="below1_part3_slide3">
+                                    <h3>Pendant Variation 3</h3>
+                                    <p>The final variation of this pendant is similar to the second variation. 
+                                        Instead of using the curved part, you use the lower part of the Ankh as 
+                                        a standalone pendant. It has a small sotrage area at the back with a magnetic 
+                                        cover for easy access. To connect it to the chain or string, you can simply 
+                                        screw it to the hole on top.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="below1_part3_imgs">
+                            <div class="below1_part3_img" id="below1_part3_img2"></div>
+                            <div class="below1_part3_img" id="below1_part3_img1"></div>
+                            <div class="below1_part3_img" id="below1_part3_img3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="below1_part4">
+                    <div class="below1_part4_coat"></div>
+                    <div class="froms_cont">
+                        <div class="status_message">
+                            <h2 class="status_message_title">Already Have an Account?</h2>
+                            <p class="status_message_message">Sign in to see our newest additions. Browse to see what jewelry designs best fit you! We want you to look amazing!
+                            </p>
+                            <button onclick="switch_forms1(0)">Sign In</button>
+                        </div>
+                        <div class="status_message">
+                            <h2 class="status_message_title">Don't Have an Account?</h2>
+                            <p class="status_message_message">What are you waiting for! Join our community of jewelry enthusiasts and explore the different options available!
+                            </p>
+                            <button onclick="switch_forms1(1)">Create Account</button>
+                        </div>
+                    </div>
+                    <div class="below1_forms_slider">
+                        <div class="below1_form_slider_inner_cont">
+                            <form class="login_form" id="form_below11" action="/login/" method="POST">
+                                <h2>Sign In</h2>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TZYvfjKXKdVQLNIlfAoc9sc2uRk3QDVTosAs3zIWlUQ5Qd7c6hpwDtSzV8E7XK0G">
+                                <input data-input id="id_Username" type="text" name="username" placeholder="Enter Username">
+                                <input data-input id="id_Password" type="password" name="password" placeholder="Enter Password">
+                                <input class="Submit" type="submit" value="Sign In">
+                            </form>
+                            <form class="register_form" id="form_below11" method="POST" enctype="multipart/form-data">
+                                <h2>Create Account</h2>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TZYvfjKXKdVQLNIlfAoc9sc2uRk3QDVTosAs3zIWlUQ5Qd7c6hpwDtSzV8E7XK0G">
+                                <div class="registration_details">
+                                    <tr>
+                                        <th><label for="id_username">Username:</label></th>
+                                        <td><input type="text" name="username" placeholder="Enter Username" maxlength="150" required id="id_username"><br><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_email">Email address:</label></th>
+                                        <td><input type="text" name="email" placeholder="Enter Email Address" maxlength="254" id="id_email"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_password">Password:</label></th>
+                                        <td><input type="password" name="password" placeholder="Enter Password" required id="id_password"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_profile_pic">Profile pic:</label></th>
+                                        <td><input type="file" name="profile_pic" accept="image/*" id="id_profile_pic"></td>
+                                    </tr>
+                                </div>
+                                <input onclick="check()" class="Submit" type="submit" value="Register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="below1_part5">
+                    <div class="below1_part5_name_and_logo">
+                        <div class="below1_part5_logo">
+                            <div class="below1_part5_oscilation" id="below1_part5_oscilation1"></div>
+                            <div class="below1_part5_oscilation" id="below1_part5_oscilation2"></div>
+                            <div class="below1_part5_oscilation" id="below1_part5_oscilation3"></div>
+                            <div class="below1_part5_oscilation" id="below1_part5_oscilation4"></div>
+                            <div class="below1_part5_oscilation" id="below1_part5_oscilation5"></div>
+                        </div>
+                        <span class="below1_part5_name">The Ankh</span>
+                    </div>
+                    <div class="below1_part5_footer_other_stuff">
+                        <div class="below1_part5_credits">
+                            Did you know that the Ankh is an ancient Egyptian symbol that symbolized life, death, and reincarnation? A fitting thing for a shapeshifting accessory to be named after! Each mode represents a cycle of reincarnation with each time the user assembling and disassembling them representing life and death!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_option" id="home_option2">
+                <div class="home_option_img" id="home_option_img2"></div>
+                <div class="home_option_coat" id="home_option_coat2"></div>
+                <div class="home_option_txt_cont">
+                    <h6>Second Mode is</h6>
+                    <h3>Bracelet Mode</h3>
+                    <h6>With Three Variations</h6>
+                </div>
+                <div class="home_option_btn" id="home_option_btn2">See More</div>
+            </div>
+            <link rel="stylesheet" href="/static/Css/our_specialists.css">
+            <style>
+                .below2_section {
+                    position: absolute;
+                    width: 24.15%;
+                    height: fit-content;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+                    margin-top: 11%;
+                    z-index: 1;
+                    padding-top: 150px;
+                    background-color: rgb(230, 230, 230);
+                    overflow: hidden;
+                    margin-left: calc(24.15% * 1);
+                }
+
+                .below2_part1 {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 90px;
+                    margin-bottom: 60px;
+                    margin-top: 50px;
+                    /* padding: 30px 30px 90px 30px; */
+                }
+
+                .below2_part1 > h2 {
+                    font-size: 30px;
+                    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.795), rgba(255, 119, 48, 0.795));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+
+                .below2_part1_text {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-top: 50px;
+                }
+
+                .below2_part1_text > p {
+                    width: 42%;
+                    letter-spacing: 0.5px;
+                    word-spacing: 3px;
+                    line-height: 30px;
+                    height: fit-content;
+                    font-size: 17px;
+                }
+
+                .below2_part1_pic {
+                    width: 375px;
+                    height: 250px;
+                    background-image: url(https://media.istockphoto.com/id/1231732696/photo/friends-walking-together-outdoors-on-footpath.jpg?s=612x612&w=0&k=20&c=R4S2JTEoZB4MeCxnLHpo-gjUAeEZM-ZHIXHSIWbriSw=);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    filter: brightness(90%);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.418);
+                }
+
+                .below2_part2 {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 600px;
+                    transform: skewY(5deg);
+                    overflow: hidden;
+                }
+
+                .below2_part2_img {
+                    position: absolute;
+                    width: 100%;
+                    height: 120%;
+                    z-index: 1;
+                    background-image: url(https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://artofmentoring.net/wp-content/uploads/2020/05/Reflection-1568x1046.jpeg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .below2_part2 > *:not(.below2_part2_coat) {
+                    transform: skewY(-5deg);
+                }
+
+                .below2_part2_coat {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.525), rgba(255, 119, 48, 0.525));
+                    z-index: 2;
+                }
+
+                .below2_part2_goals {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    z-index: 5;
+                }
+
+                .below2_part2_goal {
+                    width: 15.5%;
+                    height: 48%;
+                    background-color: rgba(255, 255, 255, 0.85);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                    display: flex;
+                    flex-direction: column;
+                    /* justify-content: center; */
+                    align-items: center;
+                    padding: 30px;
+                    z-index: 5;
+                }
+
+                .below2_part2_goal > h5 {
+                    font-weight: 400;
+                    font-size: 13.7px;
+                    width: 100%;
+                    height: 60%;
+                    line-height: 22px;
+                    word-spacing: 1.5px;
+                    text-align: center;
+                    overflow-y: scroll;
+                }
+
+                .below2_part2_goal svg {
+                    fill: url(#MyGradient2);
+                    width: 40%;
+                    height: 40%;
+                }
+
+                .below2_part2_goal .ppl_svg {
+                    width: 45%;
+                    height: 45%;
+                    margin-top: -5%;
+                    margin-bottom: -5%;
+                    fill: url(#MyGradient2);
+                    stroke-width: 0;
+                    stroke-linecap: round;
+                    stroke: url(#MyGradient2);
+                }
+
+                .below2_part2_goal .ppl_svg > .ppl_svg_circle {
+                    stroke-width: 2;
+                    fill: transparent;
+                    /* z-index: 100; */
+                }
+
+                .below2_part2_goal .ppl_svg > path:nth-child(2), .below2_part2_goal .ppl_svg > path:nth-child(3), .below2_part2_goal .ppl_svg > path:nth-child(6) {
+                    fill: transparent;
+                    stroke-width: 2;
+                    stroke: url(#MyGradient2);
+                    z-index: 1;
+                }
+
+                .below2_part3 {
+                    position: relative;
+                    width: 100%;
+                    padding: 120px 0;
+                    height: 550px;
+                    display: flex;
+                    justify-content: center;
+                    transform: skewY(5deg);
+                    z-index: 3;
+                    background-color: rgb(230, 230, 230);
+                }
+
+                .below2_part3 > * {
+                    transform: skewY(-5deg);
+                }
+
+                .below2_part3_slides {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 400px;
+                    height: 317.5px;
+                    z-index: 10;
+                    overflow-x: hidden;
+                    margin-left: -37.5vw;
+                    margin-top: -50px;
+                }
+
+                .below2_part3_slides_inner_cont {
+                    position: absolute;
+                    top: 50px;
+                    left: 0px;
+                    width: 300%;
+                    display: flex;
+                    flex-direction: row;
+                    transition: left 0.3s;
+                }
+
+                .below2_part3_slide > * {
+                    margin: 0;
+                }
+
+                .below2_part3_slide {
+                    width: 400px;
+                    background-color: rgb(230, 230, 230);
+                }
+
+                .below2_part3_slide h3 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                    margin-top: 10px;
+                }
+
+                .below2_part3_slide p {
+                    line-height: 27px;
+                    text-align: justify;
+                }
+
+                .below2_part3_dashes {
+                    position: absolute;
+                    inset: 0px;
+                    top: 30px;
+                    width: 170px;
+                    height: fit-content;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    z-index: 10;
+                }
+
+                .below2_part3_dash {
+                    width: 25%;
+                    height: 5px;
+                    background-color: rgb(211, 211, 211);
+                }
+
+                .below2_part3_imgs {
+                    position: absolute;
+                    inset: 0px;
+                    top: 5vh;
+                    left: 6.5vw;
+                }
+
+                .below2_part3_img {
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 225px;
+                    height: calc(225px * (2 / 3));
+                    z-index: 5;
+                    position: absolute;
+                    inset: 0px;
+                    box-shadow: 0 0;
+                }
+
+                #below2_part3_img1 {
+                    top: 20px;
+                    left: 200px;
+                    background-image: url(https://www.mediafire.com/convkey/44b1/zli9djxcxe3c90r9g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                #below2_part3_img2 {
+                    top: 120px;
+                    left: 90px;
+                    background-image: url(https://www.mediafire.com/convkey/2b4b/p8it9tjilbz4oju9g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                #below2_part3_img3 {
+                    background-image: url(https://www.mediafire.com/convkey/f5eb/jvezfbuylwyssx09g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                .below2_part4 {
+                    margin-top: -60px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: fit-content;
+                    padding: 230px 0 150px 0;
+                    z-index: 1;
+                    background-image: url(https://www.diversityresources.com/wp-content/uploads/2019/02/Managing-Cultural-Diversity-in-the-Workplace.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .below2_part4 .below2_part4_coat {
+                    position: absolute;
+                    width: 100%;
+                    height: 105%;
+                    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.6), rgba(255, 119, 48, 0.6));
+                    margin-top: -5%;
+                    z-index: -1;
+                }
+
+                .below2_part4 .froms_cont {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 65%;
+                    height: 370px;
+                    padding: 30px;
+                    background-color: rgba(20, 20, 20, 0.85);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                    color: rgb(201, 201, 201);
+                }
+
+                .below2_part4 .status_message {
+                    width: 42.5%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-left: 5px;
+                }
+
+                .below2_part4 .status_message_title {
+                    font-weight: 400;
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+
+                .below2_part4 .status_message_message {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                    line-height: 22px;
+                    word-spacing: 2px;
+                    letter-spacing: 0.75px;
+                    font-weight: 300;
+                }
+
+                .below2_part4 .status_message > button {
+                    width: fit-content;
+                    outline: none;
+                    border: 2px solid rgb(201, 201, 201);
+                    background-color: transparent;
+                    color: rgb(201, 201, 201);
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    padding: 7.5px 25px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    cursor: pointer;
+                }
+
+                .below2_forms_slider {
+                    position: absolute;
+                    margin-left: -28%;
+                    width: calc(65% / 2);
+                    height: calc(370px + 80px);
+                    background-color: rgb(230, 230, 230);
+                    overflow: hidden;
+                    transition: margin-left 0.3s;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                }
+
+                .below2_form_slider_inner_cont {
+                    width: 200%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    transition: left 0.3s;
+                }
+
+                .below2_part4 .login_form, .below2_part4 .register_form {
+                    width: 50%;
+                    height: 100%;
+                    padding: 30px;
+                }
+
+                .below2_part4 .register_form > .registration_details {
+                    width: 100%;
+                    height: fit-content;
+                }
+
+                .below2_part4 .login_form > *:not(input, h2), .below2_part4 .register_form *:not(input, .registration_details, h2) {
+                    display: none;
+                }
+
+                .below2_part4 .login_form, .below2_part4 .register_form, .below2_part4 .register_form > .registration_details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .below2_part4 .login_form input:not(.Submit), .below2_part4 .register_form input:not(.Submit) {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 15.5px;
+                    border: none;
+                    outline: none;
+                    margin-top: 20px;
+
+                    border-bottom: 10px solid;
+                    border-image-slice: 1;
+                    border-width: 5px;
+                    border-image-source: linear-gradient(to right bottom, rgba(255, 185, 0, 1), rgba(255, 119, 48, 1));
+                    /* background-image: linear-gradient(to bottom, rgba(0, 153, 255, 0.795), rgba(31, 47, 152, 0.795));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text; */
+                }
+
+                .below2_part4 input[type=file] {
+                    display: none;
+                }
+
+                .below2_part4 .login_form .Submit, .below2_part4 .register_form .Submit {
+                    margin-top: 20px;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 7.5px 25px;
+                    text-transform: uppercase;
+                    outline: none;
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 1), rgba(255, 119, 48, 1));
+                    cursor: pointer;
+                }
+
+                .below2_part4 .login_form > h2, .below2_part4 .register_form > h2 {
+                    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 1), rgba(255, 119, 48, 1));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    font-weight: 600;
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+
+                .below2_part5 {
+                    width: 100%;
+                    height: 275px;
+                    color: white;
+                    background-color: rgb(25, 25, 25);
+                    z-index: 5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .below2_part5_name_and_logo {
+                    transform: scale(1.5);
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 220px;
+                    margin-top: 20px;
+                }
+
+                .below2_part5_logo {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 50px;
+                }
+
+                /* .below2_part5_name {
+                    background-image: linear-gradient(to bottom, rgb(56, 175, 255), rgb(53, 67, 156));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                } */
+
+                .below2_part5_oscilation {
+                    width: 5px;
+                    height: 20px;
+                    background-color: white;
+                    border-radius: 5px;
+                }
+
+                #below2_part5_oscilation1, #below2_part5_oscilation5 {
+                    height: 10px;
+                }
+
+                #below2_part5_oscilation3 {
+                    height: 30px;
+                }
+
+                .below2_part5_footer_other_stuff {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    color: rgb(243, 243, 243);
+                    margin-top: 50px;
+                }
+
+                .below2_part5_credits {
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: 0 -1px 0 grey;
+                    padding: 20px 10px;
+                    line-height: 25px;
+                }
+            </style>
+            <div class="below2_section">
+                <div class="below2_part1">
+                    <h2>The Journey / Design Process</h2>
+                    <div class="below2_part1_text">
+                        <p> Reaching this final product wasn't easy requiring a lot of thinking and effort. 
+                            I found myself cycling many times through the engineering design proecess especially 
+                            the prototyping, testing and improving processes as I faced many obstacles. Some of 
+                            those challenges included: the design exceeding size constraints, assembly being too 
+                            difficult, certain parts not functioning as planned, absence of fllexible filament etc. 
+                            To resolve these issues, I tackled each problem individually and asked parents and 
+                            siblings for feedback until I finally reached this final design.
+                        </p>
+                        <div class="below2_part1_pic"></div>
+                    </div>
+                </div>
+                <div class="below2_part2">
+                    <div class="below2_part2_img"></div>
+                    <div class="below2_part2_coat"></div>
+                    <div class="below2_part2_goals">
+                        <div class="below2_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <defs>
+                                    <linearGradient id="MyGradient2">
+                                        <stop offset="5%" stop-color="rgba(255, 185, 0, 1)" />
+                                        <stop offset="95%" stop-color="rgba(255, 119, 48, 1)" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M13 3.7446C13 3.27314 12.8728 2.50021 12.1657 2.14424C11.4151 1.76635 10.7163 2.19354 10.3623 2.51158L4.94661 7.43717H3C1.89543 7.43717 1 8.3326 1 9.43717L1.00001 14.6248C1.00001 15.7293 1.89544 16.6248 3.00001 16.6248H4.95001L10.3623 21.4891C10.7175 21.8081 11.416 22.2331 12.1656 21.8554C12.8717 21.4998 13 20.7286 13 20.2561V3.7446Z"/>
+                                <path d="M17.336 3.79605L17.0952 3.72886C16.5633 3.58042 16.0117 3.89132 15.8632 4.42329L15.7289 4.90489C15.5804 5.43685 15.8913 5.98843 16.4233 6.13687L16.6641 6.20406C18.9551 6.84336 20.7501 9.14615 20.7501 12.0001C20.7501 14.854 18.9551 17.1568 16.6641 17.7961L16.4233 17.8632C15.8913 18.0117 15.5804 18.5633 15.7289 19.0952L15.8632 19.5768C16.0117 20.1088 16.5633 20.4197 17.0952 20.2713L17.336 20.2041C20.7957 19.2387 23.2501 15.8818 23.2501 12.0001C23.2501 8.11832 20.7957 4.76146 17.336 3.79605Z"/>
+                                <path d="M16.3581 7.80239L16.1185 7.73078C15.5894 7.57258 15.0322 7.87329 14.874 8.40243L14.7308 8.88148C14.5726 9.41062 14.8733 9.96782 15.4024 10.126L15.642 10.1976C16.1752 10.3571 16.75 11.012 16.75 12C16.75 12.9881 16.1752 13.643 15.642 13.8024L15.4024 13.874C14.8733 14.0322 14.5726 14.5894 14.7308 15.1185L14.874 15.5976C15.0322 16.1267 15.5894 16.4274 16.1185 16.2692L16.3581 16.1976C18.1251 15.6693 19.25 13.8987 19.25 12C19.25 10.1014 18.1251 8.33068 16.3581 7.80239Z"/>
+                            </svg>
+                            <h5>The most enjoyable moment of this entire project was assmbling the 3D printed parts and seeing my creation come to life. Seeing all the pieces come perfectly together feels very rewarding after all the effort that was put into it (Question 2.4).</h5>
+                        </div>
+                        <div class="below2_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                <g>
+                                    <path d="M7,25c-1.7,0-3-1.3-3-3V10c0-1.7,1.3-3,3-3s3,1.3,3,3v12C10,23.7,8.7,25,7,25z"/>
+                                </g>
+                                <g>
+                                    <path d="M25,25c-1.7,0-3-1.3-3-3V10c0-1.7,1.3-3,3-3s3,1.3,3,3v12C28,23.7,26.7,25,25,25z"/>
+                                </g>
+                                <g>
+                                    <path d="M23,17H9c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S23.6,17,23,17z"/>
+                                </g>
+                                <g>
+                                    <path d="M2,10.2c-1.2,0.4-2,1.5-2,2.8v6c0,1.3,0.8,2.4,2,2.8V10.2z"/>
+                                    <path d="M30,10.2v11.6c1.2-0.4,2-1.5,2-2.8v-6C32,11.7,31.2,10.6,30,10.2z"/>
+                                </g>
+                            </svg>
+                            <h5>I realized about myself that I'm not as bad as I thought I was when it came to the aesthetic aspect of the design. My parents ans iblings complimented the design's aesthetic saying it looked very good. I was also very satisfied with how it loooked especially the use of gold and black (Question 3.2).</h5>
+                        </div>
+                        <div class="below2_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path d="M502.198,263.697C492.386,148.068,375.395,65.876,259.027,65.876c-153.162,0-143.009,50.139-160.082,51.56   C57.128,120.813,0,169.687,0,226.746c0,57.148,23.702,112.864,92.638,112.864c-4.196,23.673,4.165,62.024,78.62,62.024   c35.664,0,85.852,0,103.149,0c0,56.369,85.034,43.14,114.898,43.14c29.941,0,34.818-32.062,29.358-40.385   C511.99,403.679,525.092,306.224,502.198,263.697z M367.112,114.661h26.447c5.684,0,10.308,4.634,10.308,10.366   c0,5.86-4.624,10.523-10.308,10.523h-26.447c-5.86,0-10.502-4.663-10.502-10.523C356.61,119.295,361.252,114.661,367.112,114.661z    M290.477,150.881c1.859,0,3.562,0,5.149,0c5.509,0,6.94-0.915,6.94-0.915c0.516-1.003,0.516-4.867,0.516-7.31v-30.505   c0-5.704,4.555-10.416,10.366-10.416c5.694,0,10.386,4.712,10.386,10.416v30.34c0.107,2.608,0.107,5.509-0.302,8.39h34.478   c1.06,0,2.21-0.049,3.591-0.049c8.372-0.35,21.045-0.72,30.37,8.225c6.054,5.85,9.228,14.61,9.228,25.94v36.697   c0,3.446-0.126,10.629,1.781,12.605c0.886,0.827,2.998,0.886,3.758,0.886h53.741c5.646,0,10.278,4.75,10.278,10.464   c0,5.85-4.633,10.503-10.278,10.503h-53.741c-9.559,0-15.418-3.854-18.572-7.106c-8.089-8.225-8.06-20.334-7.836-27.527v-1.557   v-34.965c0-5.275-1.052-9.208-2.863-10.979c-2.852-2.755-9.655-2.521-15.164-2.278c-1.568,0-2.969,0.116-4.293,0.116h-68.4   c0,0-0.108-0.116-0.331-0.116c-8.673,0-21.044,0-24.355,3.26c-0.204,0.243-0.983,0.857-0.983,3.494v56.962   c0,5.812-4.74,10.513-10.415,10.513c-5.763,0-10.445-4.701-10.445-10.513v-56.962c0-9.276,3.972-15.088,7.144-18.299   C259.942,150.657,276.276,150.706,290.477,150.881z M199.174,92.303c0-5.752,4.682-10.473,10.347-10.473   c5.841,0,10.502,4.72,10.502,10.473v11.505h17.512c5.665,0,10.347,4.76,10.347,10.435c0,5.811-4.682,10.503-10.347,10.503h-17.512   v14.942c0,5.693-4.662,10.473-10.502,10.473c-5.665,0-10.347-4.78-10.347-10.473V92.303z M96.482,144.584h43.336   c9.976-0.088,22.484-0.176,31.741,9.11c7.136,7.018,10.581,17.658,10.581,32.686v11.058h16.363c5.772,0,10.376,4.779,10.376,10.551   c0,5.752-4.604,10.454-10.376,10.454H182.14v8.664c0,5.762-4.73,10.493-10.396,10.493c-5.879,0-10.532-4.73-10.532-10.493V186.38   c0-8.858-1.548-15.029-4.36-17.774c-3.164-3.338-9.9-3.338-16.986-3.086H96.482c-5.918,0-10.454-4.72-10.454-10.522   C86.028,149.323,90.564,144.584,96.482,144.584z M87.77,236.909v19.059c0,5.811-4.604,10.464-10.542,10.464   c-5.714,0-10.318-4.653-10.318-10.464v-19.059H40.366c-5.781,0-10.502-4.722-10.502-10.474c0-5.772,4.722-10.503,10.502-10.503   h73.228c5.627,0,10.425,4.73,10.425,10.503c0,5.752-4.798,10.474-10.425,10.474H87.77z M141.16,305.679   c-5.996,5.869-8.848,14.455-8.848,26.291c0,5.664-4.75,10.464-10.454,10.464c-5.84,0-10.425-4.799-10.425-10.464   c0-17.424,5.071-31.275,15.039-41.107c17.774-17.54,45.748-17.092,62.384-16.839c1.81,0,3.309,0,4.78,0h84.315   c13.199,0,22.806-2.89,28.238-8.672c8.897-9.384,8.176-25.96,7.533-39.432c-0.135-3.232-0.272-6.268-0.272-8.916   c0-5.821,4.604-10.454,10.298-10.454c5.899,0,10.562,4.633,10.562,10.454c0,2.326,0.136,5.1,0.272,8.05   c0.77,15.448,1.81,38.828-13.101,54.616c-9.705,10.162-24.296,15.262-43.53,15.262h-84.315c-1.548,0-3.28,0-5.11,0   C174.275,294.737,152.646,294.406,141.16,305.679z M249.303,350.687v20.869c0,5.851-4.662,10.445-10.434,10.445   c-5.753,0-10.396-4.594-10.396-10.445v-20.869h-40.464c-5.694,0-10.483-4.673-10.483-10.464c0-5.674,4.788-10.445,10.483-10.445   h132.322c5.831,0,10.415,4.77,10.415,10.445c0,5.791-4.584,10.464-10.415,10.464H249.303z M390.025,402.247h-61.984   c-5.763,0-10.445-4.643-10.445-10.385c0-5.812,4.682-10.474,10.445-10.474h36.21V361.94c0-5.918,4.662-10.474,10.444-10.474   c5.821,0,10.415,4.556,10.415,10.474v19.448h4.916c5.723,0,10.425,4.662,10.425,10.474   C400.45,397.604,395.748,402.247,390.025,402.247z M417.105,329.779v-17.064h-48.348c-5.744,0-10.454-4.584-10.454-10.366   c0-5.772,4.71-10.503,10.454-10.503h73.052c5.889,0,10.551,4.731,10.551,10.503c0,5.782-4.662,10.366-10.551,10.366h-3.757v17.064   c0,5.89-4.692,10.445-10.445,10.445C421.845,340.224,417.105,335.669,417.105,329.779z M470.758,377.806h-26.427   c-5.831,0-10.494-4.555-10.494-10.366s4.663-10.406,10.494-10.406h26.427c5.86,0,10.571,4.595,10.571,10.406   S476.618,377.806,470.758,377.806z"/>
+                                </g>
+                            </svg>
+                            <h5>This design has an ancient Egyptian theme. It has hidden symbolism and a secret message in hieroglyphs that reads, "Live life to the fullest." The Ankh symbolizes life, death and reincarnation which is very fitting for a piece of jewelry that has multiple forms (Question 4.1).</h5>
+                        </div>
+                        <div class="below2_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path d="M92.574,294.24V124.336H43.277C19.449,124.336,0,144.213,0,168.467v206.44   c0,24.254,19.449,44.133,43.277,44.133h62v45.469c0,3.041,1.824,5.777,4.559,6.932c2.736,1.154,5.957,0.486,8.023-1.641   l49.844-50.76h106.494c23.828,0,43.279-19.879,43.279-44.133v-0.061H172.262C128.314,374.846,92.574,338.676,92.574,294.24z"/>
+                                    <path d="M462.717,40H172.26c-27.105,0-49.283,22.59-49.283,50.197v204.037c0,27.61,22.178,50.199,49.283,50.199   h164.668l75.348,76.033c2.399,2.442,6.004,3.172,9.135,1.852c3.133-1.322,5.176-4.434,5.176-7.887v-69.998h36.131   c27.106,0,49.283-22.59,49.283-50.199V90.197C512,62.59,489.822,40,462.717,40z M369.156,280.115H195.92v-24.316h173.236V280.115z    M439.058,204.129H195.92v-24.314h243.138V204.129z M439.058,128.143H195.92v-24.315h243.138V128.143z"/>
+                                </g>
+                            </svg>
+                            <h5>One thing I would change about this design if I were given more time is to make it even more versatile that it already is. The pendant is versatile enough, however, the string or chain is very static. Making the chain / string composed of multiple small sections could give this jewelry a new form like a watch or a ring on top of everything else it already has (Question 5.3).</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="below2_part3">
+                    <div class="below2_part3_text">
+                        <div class="below2_part3_slides">
+                            <div class="below2_part3_dashes">
+                                <div class="below2_part3_dash" id="below2_part3_dash1"></div>
+                                <div class="below2_part3_dash" id="below2_part3_dash2"></div>
+                                <div class="below2_part3_dash" id="below2_part3_dash3"></div>
+                            </div>
+                            <div class="below2_part3_slides_inner_cont">
+                                <div class="below2_part3_slide" id="below2_part3_slide1">
+                                    <h3>Bracelet Variation 1</h3>
+                                    <p>The first variation of the bracelet mode i sthe result of combining 
+                                        all the independent pieces to form an Ankh. After screwing the screw 
+                                        on the chain / string to the top of the Ankh, the wearer can make 
+                                        multiple loops on their rist until they are satisfied. This can 
+                                        function as a bracelet where the Ankh is hanging
+                                    </p>
+                                </div>
+                                <div class="below2_part3_slide" id="below2_part3_slide2">
+                                    <h3>Bracelet Variation 2</h3>
+                                    <p>The second variation of the bracelet mode uses the upper half 
+                                        of the Ankh as the hanging piece. After screwing the 
+                                        screw on the chain / string to the hole under the connecting area of 
+                                        the oval shaped piece, the wearer can make multiple loops on their wrist 
+                                        until they are satisfied. This can function as a bracelet where the curved 
+                                        part of the Ankh is hanging.
+                                    </p>
+                                </div>
+                                <div class="below2_part3_slide" id="below2_part3_slide3">
+                                    <h3>Bracelet Variation 3</h3>
+                                    <p>Similar to the second variation of the Bracelet mode, the lower half of 
+                                        the Ankh is used as the hanging piece. After screwing the screw on the 
+                                        chain / string to the hole under the connecting area of the hanging piece, 
+                                        the wearer can make multiple loops on their wrist until they are satisfied. 
+                                        This can function as a bracelet where the lower piece of the Ankh is hanging.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="below2_part3_imgs">
+                            <div class="below2_part3_img" id="below2_part3_img2"></div>
+                            <div class="below2_part3_img" id="below2_part3_img1"></div>
+                            <div class="below2_part3_img" id="below2_part3_img3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="below2_part4">
+                    <div class="below2_part4_coat"></div>
+                    <div class="froms_cont">
+                        <div class="status_message">
+                            <h2 class="status_message_title">Already Have an Account?</h2>
+                            <p class="status_message_message">Sign in to see our newest additions. Browse to see what jewelry designs best fit you! We want you to look amazing!
+                            </p>
+                            <button onclick="switch_forms2(0)">Sign In</button>
+                        </div>
+                        <div class="status_message">
+                            <h2 class="status_message_title">Don't Have an Account?</h2>
+                            <p class="status_message_message">What are you waiting for! Join our community of jewelry enthusiasts and explore the different options available!
+                            </p>
+                            <button onclick="switch_forms2(1)">Create Account</button>
+                        </div>
+                    </div>
+                    <div class="below2_forms_slider">
+                        <div class="below2_form_slider_inner_cont">
+                            <form class="login_form" id="form_below21" action="/login/" method="POST">
+                                <h2>Sign In</h2>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TZYvfjKXKdVQLNIlfAoc9sc2uRk3QDVTosAs3zIWlUQ5Qd7c6hpwDtSzV8E7XK0G">
+                                <input data-input id="id_Username" type="text" name="username" placeholder="Enter Username">
+                                <input data-input id="id_Password" type="password" name="password" placeholder="Enter Password">
+                                <input class="Submit" type="submit" value="Sign In">
+                            </form>
+                            <form class="register_form" id="form_below21" method="POST" enctype="multipart/form-data">
+                                <h2>Create Account</h2>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TZYvfjKXKdVQLNIlfAoc9sc2uRk3QDVTosAs3zIWlUQ5Qd7c6hpwDtSzV8E7XK0G">
+                                <div class="registration_details">
+                                    <tr>
+                                        <th><label for="id_username">Username:</label></th>
+                                        <td><input type="text" name="username" placeholder="Enter Username" maxlength="150" required id="id_username"><br><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_email">Email address:</label></th>
+                                        <td><input type="text" name="email" placeholder="Enter Email Address" maxlength="254" id="id_email"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_password">Password:</label></th>
+                                        <td><input type="password" name="password" placeholder="Enter Password" required id="id_password"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_profile_pic">Profile pic:</label></th>
+                                        <td><input type="file" name="profile_pic" accept="image/*" id="id_profile_pic"></td>
+                                    </tr>
+                                </div>
+                                <input onclick="check()" class="Submit" type="submit" value="Register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="below2_part5">
+                    <div class="below2_part5_name_and_logo">
+                        <div class="below2_part5_logo">
+                            <div class="below2_part5_oscilation" id="below2_part5_oscilation1"></div>
+                            <div class="below2_part5_oscilation" id="below2_part5_oscilation2"></div>
+                            <div class="below2_part5_oscilation" id="below2_part5_oscilation3"></div>
+                            <div class="below2_part5_oscilation" id="below2_part5_oscilation4"></div>
+                            <div class="below2_part5_oscilation" id="below2_part5_oscilation5"></div>
+                        </div>
+                        <span class="below2_part5_name">The Ankh</span>
+                    </div>
+                    <div class="below2_part5_footer_other_stuff">
+                        <div class="below2_part5_credits">
+                            Did you know that the Ankh is an ancient Egyptian symbol that symbolized life, death, and reincarnation? A fitting thing for a shapeshifting accessory to be named after! Each mode represents a cycle of reincarnation with each time the user assembling and disassembling them representing life and death!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_option" id="home_option3">
+                <div class="home_option_img" id="home_option_img3"></div>
+                <div class="home_option_coat" id="home_option_coat3"></div>
+                <div class="home_option_txt_cont">
+                    <h6>Third Mode is</h6>
+                    <h3>Earing Mode</h3>
+                    <h6>with a stylish look</h6>
+                </div>
+                <div class="home_option_btn" id="home_option_btn3">See More</div>
+            </div>
+            <link rel="stylesheet" href="/static/Css/our_features.css">
+            <style>
+                .below3_section {
+                    position: absolute;
+                    width: 24.15%;
+                    height: fit-content;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+                    margin-top: 11%;
+                    z-index: 1;
+                    padding-top: 150px;
+                    background-color: rgb(230, 230, 230);
+                    overflow: hidden;
+                    margin-left: calc(24.15% * 2);
+                }
+
+                .below3_part1 {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 90px;
+                    margin-bottom: 60px;
+                    margin-top: 50px;
+                    /* padding: 30px 30px 90px 30px; */
+                }
+
+                .below3_part1 > h2 {
+                    font-size: 30px;
+                    background-image: linear-gradient(to right bottom, rgba(85,197,122,0.795), rgba(40,180,133,0.795));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+
+                .below3_part1_text {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-top: 50px;
+                }
+
+                .below3_part1_text > p {
+                    width: 42%;
+                    letter-spacing: 0.5px;
+                    word-spacing: 3px;
+                    line-height: 30px;
+                    height: fit-content;
+                    font-size: 17px;
+                }
+
+                .below3_part1_pic {
+                    width: 375px;
+                    height: 250px;
+                    background-image: url(https://media.istockphoto.com/id/1231732696/photo/friends-walking-together-outdoors-on-footpath.jpg?s=612x612&w=0&k=20&c=R4S2JTEoZB4MeCxnLHpo-gjUAeEZM-ZHIXHSIWbriSw=);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    filter: brightness(90%);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.418);
+                }
+
+                .below3_part2 {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 600px;
+                    transform: skewY(5deg);
+                    overflow: hidden;
+                }
+
+                .below3_part2_img {
+                    position: absolute;
+                    width: 100%;
+                    height: 120%;
+                    z-index: 1;
+                    background-image: url(https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://artofmentoring.net/wp-content/uploads/2020/05/Reflection-1568x1046.jpeg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .below3_part2 > *:not(.below3_part2_coat) {
+                    transform: skewY(-5deg);
+                }
+
+                .below3_part2_coat {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(to right bottom, rgba(85,197,122,0.525), rgba(40,180,133,0.525));
+                    z-index: 2;
+                }
+
+                .below3_part2_goals {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    z-index: 5;
+                }
+
+                .below3_part2_goal {
+                    width: 15.5%;
+                    height: 48%;
+                    background-color: rgba(255, 255, 255, 0.85);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                    display: flex;
+                    flex-direction: column;
+                    /* justify-content: center; */
+                    align-items: center;
+                    padding: 30px;
+                    z-index: 5;
+                }
+
+                .below3_part2_goal > h5 {
+                    font-weight: 400;
+                    font-size: 13.7px;
+                    width: 100%;
+                    height: 60%;
+                    line-height: 22px;
+                    word-spacing: 1.5px;
+                    text-align: center;
+                    overflow-y: scroll;
+                }
+
+                .below3_part2_goal svg {
+                    fill: url(#MyGradient3);
+                    width: 40%;
+                    height: 40%;
+                }
+
+                .below3_part2_goal .ppl_svg {
+                    width: 45%;
+                    height: 45%;
+                    margin-top: -5%;
+                    margin-bottom: -5%;
+                    fill: url(#MyGradient3);
+                    stroke-width: 0;
+                    stroke-linecap: round;
+                    stroke: url(#MyGradient3);
+                }
+
+                .below3_part2_goal .ppl_svg > .ppl_svg_circle {
+                    stroke-width: 2;
+                    fill: transparent;
+                    /* z-index: 100; */
+                }
+
+                .below3_part2_goal .ppl_svg > path:nth-child(2), .below3_part2_goal .ppl_svg > path:nth-child(3), .below3_part2_goal .ppl_svg > path:nth-child(6) {
+                    fill: transparent;
+                    stroke-width: 2;
+                    stroke: url(#MyGradient3);
+                    z-index: 1;
+                }
+
+                .below3_part3 {
+                    position: relative;
+                    width: 100%;
+                    padding: 120px 0;
+                    height: 550px;
+                    display: flex;
+                    justify-content: center;
+                    transform: skewY(5deg);
+                    z-index: 3;
+                    background-color: rgb(230, 230, 230);
+                }
+
+                .below3_part3 > * {
+                    transform: skewY(-5deg);
+                }
+
+                .below3_part3_slides {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 400px;
+                    height: 317.5px;
+                    z-index: 10;
+                    overflow-x: hidden;
+                    margin-left: -37.5vw;
+                    margin-top: -50px;
+                }
+
+                .below3_part3_slides_inner_cont {
+                    position: absolute;
+                    top: 50px;
+                    left: 0px;
+                    width: 300%;
+                    display: flex;
+                    flex-direction: row;
+                    transition: left 0.3s;
+                }
+
+                .below3_part3_slide > * {
+                    margin: 0;
+                }
+
+                .below3_part3_slide {
+                    width: 400px;
+                    background-color: rgb(230, 230, 230);
+                }
+
+                .below3_part3_slide h3 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                    margin-top: 10px;
+                }
+
+                .below3_part3_slide p {
+                    line-height: 27px;
+                    text-align: justify;
+                }
+
+                .below3_part3_dashes {
+                    position: absolute;
+                    inset: 0px;
+                    top: 30px;
+                    width: 170px;
+                    height: fit-content;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    z-index: 10;
+                }
+
+                .below3_part3_dash {
+                    width: 25%;
+                    height: 5px;
+                    background-color: rgb(211, 211, 211);
+                }
+
+                .below3_part3_imgs {
+                    position: absolute;
+                    inset: 0px;
+                    top: 5vh;
+                    left: 6.5vw;
+                }
+
+                .below3_part3_img {
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 225px;
+                    height: calc(225px * (2 / 3));
+                    z-index: 5;
+                    position: absolute;
+                    inset: 0px;
+                    box-shadow: 0 0;
+                }
+
+                #below3_part3_img1 {
+                    top: 20px;
+                    left: 200px;
+                    background-image: url(https://www.mediafire.com/convkey/6b46/25klpvgbxo0z6sn9g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                #below3_part3_img2 {
+                    top: 120px;
+                    left: 90px;
+                    background-image: url(https://www.mediafire.com/convkey/bee3/rt6ymrolblg0ih49g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                #below3_part3_img3 {
+                    background-image: url(https://www.mediafire.com/convkey/bdce/knf0g7hb1f4w6ox9g.jpg);
+                    transform: scale(1);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
+
+                .below3_part4 {
+                    margin-top: -60px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: fit-content;
+                    padding: 230px 0 150px 0;
+                    z-index: 1;
+                    background-image: url(https://www.diversityresources.com/wp-content/uploads/2019/02/Managing-Cultural-Diversity-in-the-Workplace.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .below3_part4 .below3_part4_coat {
+                    position: absolute;
+                    width: 100%;
+                    height: 105%;
+                    background-image: linear-gradient(to right bottom, rgba(85,197,122,0.6), rgba(40,180,133,0.6));
+                    margin-top: -5%;
+                    z-index: -1;
+                }
+
+                .below3_part4 .froms_cont {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 65%;
+                    height: 370px;
+                    padding: 30px;
+                    background-color: rgba(20, 20, 20, 0.85);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                    color: rgb(201, 201, 201);
+                }
+
+                .below3_part4 .status_message {
+                    width: 42.5%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-left: 5px;
+                }
+
+                .below3_part4 .status_message_title {
+                    font-weight: 400;
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+
+                .below3_part4 .status_message_message {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                    line-height: 22px;
+                    word-spacing: 2px;
+                    letter-spacing: 0.75px;
+                    font-weight: 300;
+                }
+
+                .below3_part4 .status_message > button {
+                    width: fit-content;
+                    outline: none;
+                    border: 2px solid rgb(201, 201, 201);
+                    background-color: transparent;
+                    color: rgb(201, 201, 201);
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    padding: 7.5px 25px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    cursor: pointer;
+                }
+
+                .below3_forms_slider {
+                    position: absolute;
+                    margin-left: -28%;
+                    width: calc(65% / 2);
+                    height: calc(370px + 80px);
+                    background-color: rgb(230, 230, 230);
+                    overflow: hidden;
+                    transition: margin-left 0.3s;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                }
+
+                .below3_form_slider_inner_cont {
+                    width: 200%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    transition: left 0.3s;
+                }
+
+                .below3_part4 .login_form, .below3_part4 .register_form {
+                    width: 50%;
+                    height: 100%;
+                    padding: 30px;
+                }
+
+                .below3_part4 .register_form > .registration_details {
+                    width: 100%;
+                    height: fit-content;
+                }
+
+                .below3_part4 .login_form > *:not(input, h2), .below3_part4 .register_form *:not(input, .registration_details, h2) {
+                    display: none;
+                }
+
+                .below3_part4 .login_form, .below3_part4 .register_form, .below3_part4 .register_form > .registration_details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .below3_part4 .login_form input:not(.Submit), .below3_part4 .register_form input:not(.Submit) {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 15.5px;
+                    border: none;
+                    outline: none;
+                    margin-top: 20px;
+
+                    border-bottom: 10px solid;
+                    border-image-slice: 1;
+                    border-width: 5px;
+                    border-image-source: linear-gradient(to right bottom, rgba(85,197,122,1), rgba(40,180,133,1));
+                    /* background-image: linear-gradient(to bottom, rgba(0, 153, 255, 0.795), rgba(31, 47, 152, 0.795));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text; */
+                }
+
+                .below3_part4 input[type=file] {
+                    display: none;
+                }
+
+                .below3_part4 .login_form .Submit, .below3_part4 .register_form .Submit {
+                    margin-top: 20px;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 7.5px 25px;
+                    text-transform: uppercase;
+                    outline: none;
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right bottom, rgba(85,197,122,1), rgba(40,180,133,1));
+                    cursor: pointer;
+                }
+
+                .below3_part4 .login_form > h2, .below3_part4 .register_form > h2 {
+                    background-image: linear-gradient(to right bottom, rgba(85,197,122,1), rgba(40,180,133,1));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    font-weight: 600;
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+
+                .below3_part5 {
+                    width: 100%;
+                    height: 275px;
+                    color: white;
+                    background-color: rgb(25, 25, 25);
+                    z-index: 5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .below3_part5_name_and_logo {
+                    transform: scale(1.5);
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 220px;
+                    margin-top: 20px;
+                }
+
+                .below3_part5_logo {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 50px;
+                }
+
+                /* .below3_part5_name {
+                    background-image: linear-gradient(to bottom, rgb(56, 175, 255), rgb(53, 67, 156));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                } */
+
+                .below3_part5_oscilation {
+                    width: 5px;
+                    height: 20px;
+                    background-color: white;
+                    border-radius: 5px;
+                }
+
+                #below3_part5_oscilation1, #below3_part5_oscilation5 {
+                    height: 10px;
+                }
+
+                #below3_part5_oscilation3 {
+                    height: 30px;
+                }
+
+                .below3_part5_footer_other_stuff {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    color: rgb(243, 243, 243);
+                    margin-top: 50px;
+                }
+
+                .below3_part5_credits {
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: 0 -1px 0 grey;
+                    padding: 20px 10px;
+                    line-height: 25px;
+                }
+            </style>
+            <div class="below3_section">
+                <div class="below3_part1">
+                    <h2>The Journey / Design Process</h2>
+                    <div class="below3_part1_text">
+                        <p> Reaching this final product wasn't easy requiring a lot of thinking and effort. 
+                            I found myself cycling many times through the engineering design proecess especially 
+                            the prototyping, testing and improving processes as I faced many obstacles. Some of 
+                            those challenges included: the design exceeding size constraints, assembly being too 
+                            difficult, certain parts not functioning as planned, absence of fllexible filament etc. 
+                            To resolve these issues, I tackled each problem individually and asked parents and 
+                            siblings for feedback until I finally reached this final design.
+                        </p>
+                        <div class="below3_part1_pic"></div>
+                    </div>
+                </div>
+                <div class="below3_part2">
+                    <div class="below3_part2_img"></div>
+                    <div class="below3_part2_coat"></div>
+                    <div class="below3_part2_goals">
+                        <div class="below3_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <defs>
+                                    <linearGradient id="MyGradient3">
+                                        <stop offset="5%" stop-color="rgba(85,197,122,1)" />
+                                        <stop offset="95%" stop-color="rgba(40,180,133,1)" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M13 3.7446C13 3.27314 12.8728 2.50021 12.1657 2.14424C11.4151 1.76635 10.7163 2.19354 10.3623 2.51158L4.94661 7.43717H3C1.89543 7.43717 1 8.3326 1 9.43717L1.00001 14.6248C1.00001 15.7293 1.89544 16.6248 3.00001 16.6248H4.95001L10.3623 21.4891C10.7175 21.8081 11.416 22.2331 12.1656 21.8554C12.8717 21.4998 13 20.7286 13 20.2561V3.7446Z"/>
+                                <path d="M17.336 3.79605L17.0952 3.72886C16.5633 3.58042 16.0117 3.89132 15.8632 4.42329L15.7289 4.90489C15.5804 5.43685 15.8913 5.98843 16.4233 6.13687L16.6641 6.20406C18.9551 6.84336 20.7501 9.14615 20.7501 12.0001C20.7501 14.854 18.9551 17.1568 16.6641 17.7961L16.4233 17.8632C15.8913 18.0117 15.5804 18.5633 15.7289 19.0952L15.8632 19.5768C16.0117 20.1088 16.5633 20.4197 17.0952 20.2713L17.336 20.2041C20.7957 19.2387 23.2501 15.8818 23.2501 12.0001C23.2501 8.11832 20.7957 4.76146 17.336 3.79605Z"/>
+                                <path d="M16.3581 7.80239L16.1185 7.73078C15.5894 7.57258 15.0322 7.87329 14.874 8.40243L14.7308 8.88148C14.5726 9.41062 14.8733 9.96782 15.4024 10.126L15.642 10.1976C16.1752 10.3571 16.75 11.012 16.75 12C16.75 12.9881 16.1752 13.643 15.642 13.8024L15.4024 13.874C14.8733 14.0322 14.5726 14.5894 14.7308 15.1185L14.874 15.5976C15.0322 16.1267 15.5894 16.4274 16.1185 16.2692L16.3581 16.1976C18.1251 15.6693 19.25 13.8987 19.25 12C19.25 10.1014 18.1251 8.33068 16.3581 7.80239Z"/>
+                            </svg>
+                            <h5>The most enjoyable moment of this entire project was assmbling the 3D printed parts and seeing my creation come to life. Seeing all the pieces come perfectly together feels very rewarding after all the effort that was put into it (Question 2.4).</h5>
+                        </div>
+                        <div class="below3_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                <g>
+                                    <path d="M7,25c-1.7,0-3-1.3-3-3V10c0-1.7,1.3-3,3-3s3,1.3,3,3v12C10,23.7,8.7,25,7,25z"/>
+                                </g>
+                                <g>
+                                    <path d="M25,25c-1.7,0-3-1.3-3-3V10c0-1.7,1.3-3,3-3s3,1.3,3,3v12C28,23.7,26.7,25,25,25z"/>
+                                </g>
+                                <g>
+                                    <path d="M23,17H9c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S23.6,17,23,17z"/>
+                                </g>
+                                <g>
+                                    <path d="M2,10.2c-1.2,0.4-2,1.5-2,2.8v6c0,1.3,0.8,2.4,2,2.8V10.2z"/>
+                                    <path d="M30,10.2v11.6c1.2-0.4,2-1.5,2-2.8v-6C32,11.7,31.2,10.6,30,10.2z"/>
+                                </g>
+                            </svg>
+                            <h5>I realized about myself that I'm not as bad as I thought I was when it came to the aesthetic aspect of the design. My parents ans iblings complimented the design's aesthetic saying it looked very good. I was also very satisfied with how it loooked especially the use of gold and black (Question 3.2).</h5>
+                        </div>
+                        <div class="below3_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path d="M502.198,263.697C492.386,148.068,375.395,65.876,259.027,65.876c-153.162,0-143.009,50.139-160.082,51.56   C57.128,120.813,0,169.687,0,226.746c0,57.148,23.702,112.864,92.638,112.864c-4.196,23.673,4.165,62.024,78.62,62.024   c35.664,0,85.852,0,103.149,0c0,56.369,85.034,43.14,114.898,43.14c29.941,0,34.818-32.062,29.358-40.385   C511.99,403.679,525.092,306.224,502.198,263.697z M367.112,114.661h26.447c5.684,0,10.308,4.634,10.308,10.366   c0,5.86-4.624,10.523-10.308,10.523h-26.447c-5.86,0-10.502-4.663-10.502-10.523C356.61,119.295,361.252,114.661,367.112,114.661z    M290.477,150.881c1.859,0,3.562,0,5.149,0c5.509,0,6.94-0.915,6.94-0.915c0.516-1.003,0.516-4.867,0.516-7.31v-30.505   c0-5.704,4.555-10.416,10.366-10.416c5.694,0,10.386,4.712,10.386,10.416v30.34c0.107,2.608,0.107,5.509-0.302,8.39h34.478   c1.06,0,2.21-0.049,3.591-0.049c8.372-0.35,21.045-0.72,30.37,8.225c6.054,5.85,9.228,14.61,9.228,25.94v36.697   c0,3.446-0.126,10.629,1.781,12.605c0.886,0.827,2.998,0.886,3.758,0.886h53.741c5.646,0,10.278,4.75,10.278,10.464   c0,5.85-4.633,10.503-10.278,10.503h-53.741c-9.559,0-15.418-3.854-18.572-7.106c-8.089-8.225-8.06-20.334-7.836-27.527v-1.557   v-34.965c0-5.275-1.052-9.208-2.863-10.979c-2.852-2.755-9.655-2.521-15.164-2.278c-1.568,0-2.969,0.116-4.293,0.116h-68.4   c0,0-0.108-0.116-0.331-0.116c-8.673,0-21.044,0-24.355,3.26c-0.204,0.243-0.983,0.857-0.983,3.494v56.962   c0,5.812-4.74,10.513-10.415,10.513c-5.763,0-10.445-4.701-10.445-10.513v-56.962c0-9.276,3.972-15.088,7.144-18.299   C259.942,150.657,276.276,150.706,290.477,150.881z M199.174,92.303c0-5.752,4.682-10.473,10.347-10.473   c5.841,0,10.502,4.72,10.502,10.473v11.505h17.512c5.665,0,10.347,4.76,10.347,10.435c0,5.811-4.682,10.503-10.347,10.503h-17.512   v14.942c0,5.693-4.662,10.473-10.502,10.473c-5.665,0-10.347-4.78-10.347-10.473V92.303z M96.482,144.584h43.336   c9.976-0.088,22.484-0.176,31.741,9.11c7.136,7.018,10.581,17.658,10.581,32.686v11.058h16.363c5.772,0,10.376,4.779,10.376,10.551   c0,5.752-4.604,10.454-10.376,10.454H182.14v8.664c0,5.762-4.73,10.493-10.396,10.493c-5.879,0-10.532-4.73-10.532-10.493V186.38   c0-8.858-1.548-15.029-4.36-17.774c-3.164-3.338-9.9-3.338-16.986-3.086H96.482c-5.918,0-10.454-4.72-10.454-10.522   C86.028,149.323,90.564,144.584,96.482,144.584z M87.77,236.909v19.059c0,5.811-4.604,10.464-10.542,10.464   c-5.714,0-10.318-4.653-10.318-10.464v-19.059H40.366c-5.781,0-10.502-4.722-10.502-10.474c0-5.772,4.722-10.503,10.502-10.503   h73.228c5.627,0,10.425,4.73,10.425,10.503c0,5.752-4.798,10.474-10.425,10.474H87.77z M141.16,305.679   c-5.996,5.869-8.848,14.455-8.848,26.291c0,5.664-4.75,10.464-10.454,10.464c-5.84,0-10.425-4.799-10.425-10.464   c0-17.424,5.071-31.275,15.039-41.107c17.774-17.54,45.748-17.092,62.384-16.839c1.81,0,3.309,0,4.78,0h84.315   c13.199,0,22.806-2.89,28.238-8.672c8.897-9.384,8.176-25.96,7.533-39.432c-0.135-3.232-0.272-6.268-0.272-8.916   c0-5.821,4.604-10.454,10.298-10.454c5.899,0,10.562,4.633,10.562,10.454c0,2.326,0.136,5.1,0.272,8.05   c0.77,15.448,1.81,38.828-13.101,54.616c-9.705,10.162-24.296,15.262-43.53,15.262h-84.315c-1.548,0-3.28,0-5.11,0   C174.275,294.737,152.646,294.406,141.16,305.679z M249.303,350.687v20.869c0,5.851-4.662,10.445-10.434,10.445   c-5.753,0-10.396-4.594-10.396-10.445v-20.869h-40.464c-5.694,0-10.483-4.673-10.483-10.464c0-5.674,4.788-10.445,10.483-10.445   h132.322c5.831,0,10.415,4.77,10.415,10.445c0,5.791-4.584,10.464-10.415,10.464H249.303z M390.025,402.247h-61.984   c-5.763,0-10.445-4.643-10.445-10.385c0-5.812,4.682-10.474,10.445-10.474h36.21V361.94c0-5.918,4.662-10.474,10.444-10.474   c5.821,0,10.415,4.556,10.415,10.474v19.448h4.916c5.723,0,10.425,4.662,10.425,10.474   C400.45,397.604,395.748,402.247,390.025,402.247z M417.105,329.779v-17.064h-48.348c-5.744,0-10.454-4.584-10.454-10.366   c0-5.772,4.71-10.503,10.454-10.503h73.052c5.889,0,10.551,4.731,10.551,10.503c0,5.782-4.662,10.366-10.551,10.366h-3.757v17.064   c0,5.89-4.692,10.445-10.445,10.445C421.845,340.224,417.105,335.669,417.105,329.779z M470.758,377.806h-26.427   c-5.831,0-10.494-4.555-10.494-10.366s4.663-10.406,10.494-10.406h26.427c5.86,0,10.571,4.595,10.571,10.406   S476.618,377.806,470.758,377.806z"/>
+                                </g>
+                            </svg>
+                            <h5>This design has an ancient Egyptian theme. It has hidden symbolism and a secret message in hieroglyphs that reads, "Live life to the fullest." The Ankh symbolizes life, death and reincarnation which is very fitting for a piece of jewelry that has multiple forms (Question 4.1).</h5>
+                        </div>
+                        <div class="below3_part2_goal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path d="M92.574,294.24V124.336H43.277C19.449,124.336,0,144.213,0,168.467v206.44   c0,24.254,19.449,44.133,43.277,44.133h62v45.469c0,3.041,1.824,5.777,4.559,6.932c2.736,1.154,5.957,0.486,8.023-1.641   l49.844-50.76h106.494c23.828,0,43.279-19.879,43.279-44.133v-0.061H172.262C128.314,374.846,92.574,338.676,92.574,294.24z"/>
+                                    <path d="M462.717,40H172.26c-27.105,0-49.283,22.59-49.283,50.197v204.037c0,27.61,22.178,50.199,49.283,50.199   h164.668l75.348,76.033c2.399,2.442,6.004,3.172,9.135,1.852c3.133-1.322,5.176-4.434,5.176-7.887v-69.998h36.131   c27.106,0,49.283-22.59,49.283-50.199V90.197C512,62.59,489.822,40,462.717,40z M369.156,280.115H195.92v-24.316h173.236V280.115z    M439.058,204.129H195.92v-24.314h243.138V204.129z M439.058,128.143H195.92v-24.315h243.138V128.143z"/>
+                                </g>
+                            </svg>
+                            <h5>One thing I would change about this design if I were given more time is to make it even more versatile that it already is. The pendant is versatile enough, however, the string or chain is very static. Making the chain / string composed of multiple small sections could give this jewelry a new form like a watch or a ring on top of everything else it already has (Question 5.3).</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="below3_part3">
+                    <div class="below3_part3_text">
+                        <div class="below3_part3_slides">
+                            <div class="below3_part3_dashes">
+                                <div class="below3_part3_dash" id="below3_part3_dash1"></div>
+                                <div class="below3_part3_dash" id="below3_part3_dash2"></div>
+                                <div class="below3_part3_dash" id="below3_part3_dash3"></div>
+                            </div>
+                            <div class="below3_part3_slides_inner_cont">
+                                <div class="below3_part3_slide" id="below3_part3_slide1">
+                                    <h3>Assemble Earings Step 1</h3>
+                                    <p>Unscrew the screw connecting all the Ankh pieces, be sure not to lose 
+                                        the nut. Remove the magnetic cover and put the screw and nut into the 
+                                        storage area of the lower piece. Put the cover back and make sure it 
+                                        is sealed properly.
+                                    </p>
+                                </div>
+                                <div class="below3_part3_slide" id="below3_part3_slide2">
+                                    <h3>Assemble Earings Step 2</h3>
+                                    <p>Take the 2 side pieces and hold each of the side pieces' halves. Slide 
+                                        them in a way so that the longer half is pushed to the direction of the 
+                                        hole on it. Once this is done, isolate the longer pieces. Put the earing 
+                                        hooks somewhere nearby for easy access.
+                                    </p>
+                                </div>
+                                <div class="below3_part3_slide" id="below3_part3_slide3">
+                                    <h3>Assemble Earings Step 3</h3>
+                                    <p>At the end of each hook, there will be a smaller hook. Open the hooks and 
+                                        carefully clip them onto the longer halves of the side pieces so that the 
+                                        side with the hieroglyph engravings is facing away from the tip of the bigger 
+                                        hook. Make sure they are connected properly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="below3_part3_imgs">
+                            <div class="below3_part3_img" id="below3_part3_img2"></div>
+                            <div class="below3_part3_img" id="below3_part3_img1"></div>
+                            <div class="below3_part3_img" id="below3_part3_img3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="below3_part4">
+                    <div class="below3_part4_coat"></div>
+                    <div class="froms_cont">
+                        <div class="status_message">
+                            <h2 class="status_message_title">Already Have an Account?</h2>
+                            <p class="status_message_message">Sign in to see our newest additions. Browse to see what jewelry designs best fit you! We want you to look amazing!
+                            </p>
+                            <button onclick="switch_forms3(0)">Sign In</button>
+                        </div>
+                        <div class="status_message">
+                            <h2 class="status_message_title">Don't Have an Account?</h2>
+                            <p class="status_message_message">What are you waiting for! Join our community of jewelry enthusiasts and explore the different options available!
+                            </p>
+                            <button onclick="switch_forms3(1)">Create Account</button>
+                        </div>
+                    </div>
+                    <div class="below3_forms_slider">
+                        <div class="below3_form_slider_inner_cont">
+                            <form class="login_form" id="form_below31" action="/login/" method="POST">
+                                <h2>Sign In</h2>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TZYvfjKXKdVQLNIlfAoc9sc2uRk3QDVTosAs3zIWlUQ5Qd7c6hpwDtSzV8E7XK0G">
+                                <input data-input id="id_Username" type="text" name="username" placeholder="Enter Username">
+                                <input data-input id="id_Password" type="password" name="password" placeholder="Enter Password">
+                                <input class="Submit" type="submit" value="Sign In">
+                            </form>
+                            <form class="register_form" id="form_below31" method="POST" enctype="multipart/form-data">
+                                <h2>Create Account</h2>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TZYvfjKXKdVQLNIlfAoc9sc2uRk3QDVTosAs3zIWlUQ5Qd7c6hpwDtSzV8E7XK0G">
+                                <div class="registration_details">
+                                    <tr>
+                                        <th><label for="id_username">Username:</label></th>
+                                        <td><input type="text" name="username" placeholder="Enter Username" maxlength="150" required id="id_username"><br><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_email">Email address:</label></th>
+                                        <td><input type="text" name="email" placeholder="Enter Email Address" maxlength="254" id="id_email"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_password">Password:</label></th>
+                                        <td><input type="password" name="password" placeholder="Enter Password" required id="id_password"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="id_profile_pic">Profile pic:</label></th>
+                                        <td><input type="file" name="profile_pic" accept="image/*" id="id_profile_pic"></td>
+                                    </tr>
+                                </div>
+                                <input onclick="check()" class="Submit" type="submit" value="Register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="below3_part5">
+                    <div class="below3_part5_name_and_logo">
+                        <div class="below3_part5_logo">
+                            <div class="below3_part5_oscilation" id="below3_part5_oscilation1"></div>
+                            <div class="below3_part5_oscilation" id="below3_part5_oscilation2"></div>
+                            <div class="below3_part5_oscilation" id="below3_part5_oscilation3"></div>
+                            <div class="below3_part5_oscilation" id="below3_part5_oscilation4"></div>
+                            <div class="below3_part5_oscilation" id="below3_part5_oscilation5"></div>
+                        </div>
+                        <span class="below3_part5_name">The Ankh</span>
+                    </div>
+                    <div class="below3_part5_footer_other_stuff">
+                        <div class="below3_part5_credits">
+                            Did you know that the Ankh is an ancient Egyptian symbol that symbolized life, death, and reincarnation? A fitting thing for a shapeshifting accessory to be named after! Each mode represents a cycle of reincarnation with each time the user assembling and disassembling them representing life and death!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="/static/Css/navbar.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                font-family: 'Montserrat';
+            }
+
+            /* width */
+            ::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #ffffff; 
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: rgb(170, 170, 170); 
+                border-radius: 5px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+            }
+
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                display: flex;
+                flex-direction: column;
+
+                width: 65px;
+                height: 100%;
+                background-color: white;
+                box-shadow: 1px 0 rgba(128, 128, 128, 0.432);
+                overflow-x: hidden;
+                /* overflow-y: scroll; */
+                transition: width 0.3s;
+                /* scrollbar-width: none; */
+                z-index: 100000000000;
+            }
+
+            .nav_part1 {
+                position: absolute;
+                width: 320px;
+                height: 50px;
+                /* background-color: aqua; */
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 10px;
+                margin-top: 5px;
+            }
+
+            .nav_icon {
+                width: 20px;
+                height: 17.5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: calc((65px / 2) - (20px / 2));
+                margin-right: 15px;
+                cursor: pointer;
+                transition: margin-left 0.3s;
+            }
+
+            .nav_tick {
+                background-color: rgb(20, 20, 20);
+                width: 100%;
+                height: 3px;
+                border-radius: 3px;
+            }
+
+            .nav_logo {
+                width: 50px;
+                height: 30px;
+                display: none;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+
+            .nav_logo_tick {
+                width: 5px;
+                height: 60%;
+                background-color: rgb(20, 20, 20);
+                border-radius: 10px;
+                transition: height 0.1s;
+            }
+
+            .app_name {
+                display: none;
+                margin-left: 15px;
+                font-size: 22.5px;
+                font-weight: 800;
+            }
+
+            .nav_part2 {
+                display: flex;
+                width: 320px;
+                flex-direction: column;
+                position: absolute;
+                margin-top: 65px;
+            }
+
+            .nav_option {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 12.5px 10px 12.5px 20px;
+                /* margin-bottom: 5px; */
+                cursor: pointer;
+            }
+
+            .nav_option > span {
+                margin-left: 20px;
+                word-spacing: 2px;
+                font-size: 14px;
+            }
+
+            .nav_option_icon {
+                width: 25px;
+                height: 25px;
+                fill: rgb(185, 185, 185);
+            }
+
+            .ripple{
+                position: absolute;
+                top:0; left:0; bottom:0; right:0;
+                overflow: hidden;
+                -webkit-transform: translateZ(0); /* to contain zoomed ripple */
+                transform: translateZ(0);
+                border-radius: inherit; /* inherit from parent (rounded buttons etc) */
+                pointer-events: none; /* allow user interaction */
+                animation: ripple-shadow 0.4s forwards;
+                -webkit-animation: ripple-shadow 0.4s forwards;
+            }
+
+            .rippleWave{
+                backface-visibility: hidden;
+                position: absolute;
+                border-radius: 50%;
+                transform: scale(0.7); -webkit-transform: scale(0.7);
+                background: rgba(255,255,255, 1);
+                opacity: 0.45;
+                animation: ripple 2s forwards;
+                -webkit-animation: ripple 2s forwards;
+            }
+
+            @keyframes ripple-shadow {
+                0%   {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+                20%  {box-shadow: 0 4px 16px rgba(0,0,0,0.3);}
+                100% {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+            }
+
+            @-webkit-keyframes ripple-shadow {
+                0%   {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+                20%  {box-shadow: 0 4px 16px rgba(0,0,0,0.3);}
+                100% {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+            }
+
+            @keyframes ripple {
+                to {transform: scale(24); opacity:0;}
+            }
+
+            @-webkit-keyframes ripple {
+                to {-webkit-transform: scale(24); opacity:0;}
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <div class="navbar">
+            <div class="nav_part1">
+                <div class="nav_logo">
+                    <div class="nav_logo_tick" id="nav_logo_tick1" data-len="12"></div>
+                    <div class="nav_logo_tick" id="nav_logo_tick2" data-len="23"></div>
+                    <div class="nav_logo_tick" id="nav_logo_tick3" data-len="34"></div>
+                    <div class="nav_logo_tick" id="nav_logo_tick4" data-len="23"></div>
+                    <div class="nav_logo_tick" id="nav_logo_tick5" data-len="12"></div>
+                </div>
+                <span class="app_name">Omar Shanab</span>
+                <div class="nav_icon" onclick="change_nav()">
+                    <div class="nav_tick" id="nav_tick1"></div>
+                    <div class="nav_tick" id="nav_tick2"></div>
+                    <div class="nav_tick" id="nav_tick3"></div>
+                </div>
+            </div>
+            <div class="nav_part2">
+                <a href="idk.html" class="nav_option" data-ripple="rgba(0,0,0, 0.3)">
+                    <svg class="nav_option_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M6.5 20V11H3L12 5L21 11H17.5V20H14.5V16.5C14.5 15.6716 13.8284 15 13 15H11C10.1716 15 9.5 15.6716 9.5 16.5V20H6.5Z" stroke="rgb(185, 185, 185)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>CAD Jewelry</span>
+                </a>
+                <a href="idk2.html" class="nav_option" data-ripple="rgba(0,0,0, 0.3)">
+                    <svg class="nav_option_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M11.5 2C6.26 2 2 6.26 2 11.5C2 16.74 6.26 21 11.5 21C16.74 21 21 16.74 21 11.5C21 6.26 16.74 2 11.5 2ZM11.5 13.75H8.5C8.09 13.75 7.75 13.41 7.75 13C7.75 12.59 8.09 12.25 8.5 12.25H11.5C11.91 12.25 12.25 12.59 12.25 13C12.25 13.41 11.91 13.75 11.5 13.75ZM14.5 10.75H8.5C8.09 10.75 7.75 10.41 7.75 10C7.75 9.59 8.09 9.25 8.5 9.25H14.5C14.91 9.25 15.25 9.59 15.25 10C15.25 10.41 14.91 10.75 14.5 10.75Z"/>
+                        <path d="M21.3005 21.9986C21.1205 21.9986 20.9405 21.9286 20.8105 21.7986L18.9505 19.9386C18.6805 19.6686 18.6805 19.2286 18.9505 18.9486C19.2205 18.6786 19.6605 18.6786 19.9405 18.9486L21.8005 20.8086C22.0705 21.0786 22.0705 21.5186 21.8005 21.7986C21.6605 21.9286 21.4805 21.9986 21.3005 21.9986Z"/>
+                    </svg>
+                    <span>Electrical Assembly</span>
+                </a>
+            </div>
+        </div>
+        <script>
+            
+var slides_num_indicator1 = 1
+                
+                function func1() {
+                    var slides = document.querySelectorAll('.below1_part3_slide')
+                
+                    for (var i = 0; i < slides.length; i++) {
+                        if (slides_num_indicator1-1 == i) {
+                            document.querySelectorAll('.below1_part3_dash')[i].style.backgroundColor = 'orange'
+                            document.querySelectorAll('.below1_part3_img')[i].style.boxShadow = '0 0 20px rgba(0, 0, 0, 1)'
+                            document.querySelectorAll('.below1_part3_img')[i].style.zIndex = 2
+                            document.querySelectorAll('.below1_part3_img')[i].style.transform = 'scale(1.1)'
+                            document.querySelector('.below1_part3_slides_inner_cont').style.left = (-i * 400).toString() + 'px'
+                
+                        } else {
+                            document.querySelectorAll('.below1_part3_dash')[i].style.backgroundColor = 'rgb(211, 211, 211)'
+                            document.querySelectorAll('.below1_part3_img')[i].style.boxShadow = 'none'
+                            document.querySelectorAll('.below1_part3_img')[i].style.zIndex = 1
+                            document.querySelectorAll('.below1_part3_img')[i].style.transform = 'scale(1)'
+                        }
+                    }
+                
+                    if (slides_num_indicator1 < 3) {
+                        slides_num_indicator1 += 1
+                    } else {
+                        slides_num_indicator1 = 1
+                    }
+                }
+                
+                func1()
+                setInterval(function() {func1()}, 2000)
+                
+                function switch_forms1(form_index) {
+                    // var form_to_move = document.querySelectorAll('.form_below11')[form_index]
+                    var user_forms_slider1 = document.querySelector('.below1_forms_slider')
+                    var user_forms_slider_inner1 = document.querySelector('.below1_form_slider_inner_cont')
+                
+                    if (form_index == 1) {
+                        user_forms_slider1.style.marginLeft = '28%'
+                        user_forms_slider_inner1.style.left = `-100%`
+                    } else if (form_index == 0) {
+                        user_forms_slider1.style.marginLeft = '-28%'
+                        user_forms_slider_inner1.style.left = `0`
+                    }
+                }
+                
+                
+                var slides_num_indicator2 = 1
+                                
+                function func2() {
+                    var slides = document.querySelectorAll('.below2_part3_slide')
+                
+                    for (var i = 0; i < slides.length; i++) {
+                        if (slides_num_indicator2-1 == i) {
+                            document.querySelectorAll('.below2_part3_dash')[i].style.backgroundColor = 'orange'
+                            document.querySelectorAll('.below2_part3_img')[i].style.boxShadow = '0 0 20px rgba(0, 0, 0, 1)'
+                            document.querySelectorAll('.below2_part3_img')[i].style.zIndex = 2
+                            document.querySelectorAll('.below2_part3_img')[i].style.transform = 'scale(1.1)'
+                            document.querySelector('.below2_part3_slides_inner_cont').style.left = (-i * 400).toString() + 'px'
+                
+                        } else {
+                            document.querySelectorAll('.below2_part3_dash')[i].style.backgroundColor = 'rgb(211, 211, 211)'
+                            document.querySelectorAll('.below2_part3_img')[i].style.boxShadow = 'none'
+                            document.querySelectorAll('.below2_part3_img')[i].style.zIndex = 1
+                            document.querySelectorAll('.below2_part3_img')[i].style.transform = 'scale(1)'
+                        }
+                    }
+                
+                    if (slides_num_indicator2 < 3) {
+                        slides_num_indicator2 += 1
+                    } else {
+                        slides_num_indicator2 = 1
+                    }
+                }
+                
+                func2()
+                setInterval(function() {func2()}, 2000)
+                
+                function switch_forms2(form_index) {
+                    // var form_to_move = document.querySelectorAll('.form_below21')[form_index]
+                    var user_forms_slider2 = document.querySelector('.below2_forms_slider')
+                    var user_forms_slider_inner2 = document.querySelector('.below2_form_slider_inner_cont')
+                
+                    if (form_index == 1) {
+                        user_forms_slider2.style.marginLeft = '28%'
+                        user_forms_slider_inner2.style.left = `-100%`
+                    } else if (form_index == 0) {
+                        user_forms_slider2.style.marginLeft = '-28%'
+                        user_forms_slider_inner2.style.left = `0`
+                    }
+                }
+                
+                
+                var slides_num_indicator3 = 1
+                                
+                function func3() {
+                    var slides = document.querySelectorAll('.below3_part3_slide')
+                
+                    for (var i = 0; i < slides.length; i++) {
+                        if (slides_num_indicator3-1 == i) {
+                            document.querySelectorAll('.below3_part3_dash')[i].style.backgroundColor = 'orange'
+                            document.querySelectorAll('.below3_part3_img')[i].style.boxShadow = '0 0 20px rgba(0, 0, 0, 1)'
+                            document.querySelectorAll('.below3_part3_img')[i].style.zIndex = 2
+                            document.querySelectorAll('.below3_part3_img')[i].style.transform = 'scale(1.1)'
+                            document.querySelector('.below3_part3_slides_inner_cont').style.left = (-i * 400).toString() + 'px'
+                
+                        } else {
+                            document.querySelectorAll('.below3_part3_dash')[i].style.backgroundColor = 'rgb(211, 211, 211)'
+                            document.querySelectorAll('.below3_part3_img')[i].style.boxShadow = 'none'
+                            document.querySelectorAll('.below3_part3_img')[i].style.zIndex = 1
+                            document.querySelectorAll('.below3_part3_img')[i].style.transform = 'scale(1)'
+                        }
+                    }
+                
+                    if (slides_num_indicator3 < 3) {
+                        slides_num_indicator3 += 1
+                    } else {
+                        slides_num_indicator3 = 1
+                    }
+                }
+                
+                func3()
+                setInterval(function() {func3()}, 2000)
+                
+                function switch_forms3(form_index) {
+                    // var form_to_move = document.querySelectorAll('.form_below31')[form_index]
+                    var user_forms_slider3 = document.querySelector('.below3_forms_slider')
+                    var user_forms_slider_inner3 = document.querySelector('.below3_form_slider_inner_cont')
+                
+                    if (form_index == 1) {
+                        user_forms_slider3.style.marginLeft = '28%'
+                        user_forms_slider_inner3.style.left = `-100%`
+                    } else if (form_index == 0) {
+                        user_forms_slider3.style.marginLeft = '-28%'
+                        user_forms_slider_inner3.style.left = `0`
+                    }
+                }
+                
+                
+                var logo_ticks = document.querySelectorAll('.nav_logo_tick')
+                var clicks_nav_icon = 0
+                var logo_is_hover = false
+                
+                // $('.navbar').css('width', '65px')
+                // $('.nav_logo').css('display', 'none')
+                // $('.app_name').css('display', 'none')
+                // $('.nav_icon').css('margin-left', 'calc((65px / 2) - (20px / 2))')
+                
+                logo_ticks.forEach(function(elem) {
+                    elem.style.height = (parseInt(document.querySelector(`#${elem.id}`).dataset.len[0]) * 10).toString() + 'px'
+                })
+                
+                function generateRandom(min, max) {
+                    let difference = max - min;
+                    let rand = Math.random();
+                
+                    rand = Math.floor( rand * difference);
+                    rand = rand + min;
+                
+                    return rand;
+                }
+                
+                function roundNearest5(num) {
+                    return Math.round(num / 5) * 5;
+                }
+                
+                document.querySelector('.nav_logo').addEventListener('mouseover', function() {
+                    logo_is_hover = true
+                    setInterval(function() {
+                        if (logo_is_hover == true) {
+                            logo_ticks.forEach(function(elem) {
+                                console.log(roundNearest5(generateRandom(parseInt(document.querySelector(`#${elem.id}`).dataset.len[0]) * 10, parseInt(document.querySelector(`#${elem.id}`).dataset.len[1]) * 10)))
+                                random_num = roundNearest5(generateRandom(parseInt(document.querySelector(`#${elem.id}`).dataset.len[0]) * 10, parseInt(document.querySelector(`#${elem.id}`).dataset.len[1]) * 10))
+                                elem.style.height = (random_num).toString() + 'px'
+                            })
+                        }
+                    }, 200)
+                })
+                
+                document.querySelector('.nav_logo').onmouseout = function() {
+                    logo_is_hover = false
+                    logo_ticks.forEach(function(elem) {
+                        elem.style.height = (parseInt(document.querySelector(`#${elem.id}`).dataset.len[0]) * 10).toString() + 'px'
+                    })
+                }
+                
+                function change_nav() {
+                    clicks_nav_icon += 1
+                
+                    if (clicks_nav_icon % 2 == 0) {
+                        $('.navbar').css('width', '65px')
+                        $('body').css('margin-left', '0px')
+                
+                        $('.nav_logo').css('display', 'none')
+                        $('.app_name').css('display', 'none')
+                
+                        $('.nav_icon').css('margin-left', 'calc((65px / 2) - (20px / 2))')
+                    } else {
+                        $('.navbar').css('width', '320px')
+                        $('body').css('margin-left', '185px')
+                
+                        $('.nav_logo').css('display', 'flex')
+                        $('.app_name').css('display', 'flex')
+                
+                        $('.nav_icon').css('margin-left', 'auto')
+                    }
+                }
+                
+                $(document).on("mousedown", "[data-ripple]", function(e) {
+                
+                    var $self = $(this);
+                    
+                    if($self.is(".btn-disabled")) {
+                        return;
+                    }
+                
+                    if($self.closest("[data-ripple]")) {
+                        e.stopPropagation();
+                    }
+                    
+                    var initPos = $self.css("position"),
+                        offs = $self.offset(),
+                        x = e.pageX - offs.left,
+                        y = e.pageY - offs.top,
+                        dia = Math.min(this.offsetHeight, this.offsetWidth, 100), // start diameter
+                        $ripple = $('<div/>', {class : "ripple",appendTo : $self 
+                    });
+                    
+                    if(!initPos || initPos==="static") {
+                        $self.css({position:"relative"});
+                    }
+                    
+                    $('<div/>', {
+                        class : "rippleWave",
+                        css : {
+                            background: $self.data("ripple"),
+                            width: dia,
+                            height: dia,
+                            left: x - (dia/2),
+                            top: y - (dia/2),
+                        },
+                        appendTo : $ripple,
+                        one : {
+                            animationend : function(){
+                                $ripple.remove();
+                            }
+                        }
+                    });
+                });
+                
+                
+                var home_options = document.querySelectorAll('.home_option')
+                var home_options_btns = document.querySelectorAll('.home_option_btn')
+                var og_btn_txt = ''
+                var home_option_clicked = false
+                
+                home_options.forEach(function(elem) {
+                    elem.addEventListener('mouseover', function() {
+                        if (home_option_clicked == false) {
+                            for (var i = 0; i < home_options.length; i++) {
+                                if (elem != home_options[i]) {
+                                    home_options[i].style.width = `${(window.innerWidth - (window.innerWidth / 2.65)) / 2}px`
+                                } else {
+                                    home_options[i].style.width = `${window.innerWidth / 2.65}px`
+                                }
+                            }
+                        }
+                    })
+                })
+                
+                document.querySelector('.home_options').onmouseout = function(event) {
+                    if (home_option_clicked == false) {
+                        for (var i = 0; i < home_options.length; i++) {
+                            home_options[i].style.width = `${window.innerWidth / 3}px`
+                        }
+                    }
+                }
+                
+                home_options_btns.forEach(function(elem) {
+                    elem.addEventListener('click', function() {
+                        var below_section = document.querySelector(`.below${parseInt(elem.id.charAt(elem.id.length - 1))}_section`)
+                        console.log(below_section)
+                        the_elem_slides_num_indicator = parseInt(elem.id.charAt(elem.id.length - 1)) - 1
+                        home_option_clicked = !home_option_clicked
+                
+                        if (home_option_clicked == true) {
+                            for (var i = 0; i < home_options.length; i++) {
+                                document.querySelector('.home_options').style.overflowY = 'scroll'
+                                home_options[i].style.transform = 'skewY(5deg)'
+                                elem.style.transform = 'skewY(-5deg)'
+                                document.querySelector(`#home_option_img${parseInt(elem.id.charAt(elem.id.length - 1))}`).style.transform = 'skewY(-5deg)'
+                                below_section.style.display = 'flex'
+                
+                                home_options[i].style.transition = 'width 0.3s, height 0.3s ease-in 0.3s, border-radius 0.3s ease-in 0.3s, transform 0.3s'
+                
+                                document.querySelector('.home_options').style.width = 'calc(400% - 65px)'
+                                var home_option_width = document.querySelector('.home_options').offsetWidth
+                
+                                document.querySelectorAll('.home_option_txt_cont')[i].style.transform = 'scale(1.75) skewY(-5deg)'
+                                home_options[i].style.width = `${home_option_width}px`
+                                // home_options[i].style.height = `97%`
+                
+                                if (the_elem_slides_num_indicator == i) {
+                                    document.querySelector('.home_options').style.marginLeft = `calc((${-i} * ${home_option_width}px) + 65px)`
+                                    // home_options[i].style.borderRadius = '0% 0% 50% 50% / 0% 0% 15% 15%'
+                
+                                    og_btn_txt = elem.innerHTML
+                                    elem.innerText = 'Go Back'
+                                }
+                            }
+                        } else if (home_option_clicked == false) {
+                            for (var i = 0; i < home_options.length; i++) {
+                                document.querySelector('.home_options').style.overflowY = 'hidden'
+                                elem.style.transform = 'skewY(0deg)'
+                                document.querySelector(`#home_option_img${parseInt(elem.id.charAt(elem.id.length - 1))}`).style.transform = 'skewY(0deg)'
+                                below_section.style.display = 'none'
+                                home_options[i].style.transform = 'skewY(0deg)'
+                
+                                elem.innerText = og_btn_txt
+                                home_options[i].style.transition = 'width 0.3s ease-in-out, height 0.3s, border-radius 0.2s, transform 0.3s'
+                
+                                document.querySelector('.home_options').style.width = 'calc(100% - 65px)'
+                                document.querySelectorAll('.home_option_txt_cont')[i].style.transform = 'scale(1) skewY(0deg)'
+                                
+                                home_options[i].style.width = '25%'
+                                // home_options[i].style.height = `100%`
+                
+                                document.querySelector('.home_options').style.marginLeft = `65px`
+                                // home_options[i].style.borderRadius = '0'
+                            }
+                        }
+                    })
+                })
+        </script>
+        <script>
+            function change_page(page) {
+                if (page == 0) {
+                    window.location.replace("https://sites.google.com/view/cadjewelry/home")
+                } else if (page == 1) {
+                    window.location.replace("https://sites.google.com/view/electro-assembly-sparkade/home"); 
+                }
+            }
+        </script>
+    </body>
+</html>
